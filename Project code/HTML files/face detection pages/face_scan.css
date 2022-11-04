@@ -43,51 +43,54 @@ video{
 }
 @media screen and (max-width:768px){
     h2{
-        margin-left: 130px;
+        margin-left: 80px;
         color: #0a6f48;
         font-size: 30px;
         font-family: 'League Spartan', sans-serif;
     
     }p{
-        margin-left: 160px;font-family: 'League Spartan', sans-serif;font-size: 24px;color: #0a6f48;margin-top: 368px;
+        margin-left: 110px;font-family: 'League Spartan', sans-serif;font-size: 24px;color: #0a6f48;margin-top: 368px;
     }button
     {
-        margin-left: 150px;
+        margin-left: 100px;
         width: 170px;
         height: 40px;
         font-size: 15px;
-        }video{
+        }
+        video{
         width: 390px;
-        clip-path: circle();position:absolute;margin-left: 50px;margin-top: 30px;
+        clip-path: circle();position:absolute;margin-left: -18px;margin-top: 30px;
 
 }#scan
-{width: 130px;margin-left: 100px;margin-top: 100px;position: absolute;}
+{width: 130px;margin-left: 110px;margin-top: 100px;position: absolute;}
 
 }
 @media screen and (min-width:768px) and (max-width:1024px){
     h2{
-        margin-left: 370px;
+        margin-left: 270px;
         color: #0a6f48;
         font-size: 30px;
-        font-family: 'League Spartan', sans-serif;
+        font-family: 'League Spartan', sans-serif;margin-top: 150px;
+
+       
     
     }
     p{
-        margin-left: 400px;font-family: 'League Spartan', sans-serif;font-size: 24px;color: #0a6f48;margin-top: 368px;
+        margin-left: 310px;font-family: 'League Spartan', sans-serif;font-size: 24px;color: #0a6f48;margin-top: 410px;
     }
     button
     {
-        margin-left: 390px;
+        margin-left: 300px;
         width: 170px;
         height: 40px;
         font-size: 15px;
     }
         video{
         width: 390px;
-        clip-path: circle();position:absolute;margin-left: 280px;margin-top: 30px;
+        clip-path: circle();position:absolute;margin-left: 180px;margin-top: 30px;
 
 }
-#scan{width: 130px;margin-left: 405px;margin-top: 100px;position: absolute;}
+#scan{width: 130px;margin-left: 310px;margin-top: 100px;position: absolute;}
 }
 
  
