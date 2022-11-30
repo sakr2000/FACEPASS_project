@@ -1,0 +1,11 @@
+facepass, username:
+font: Berlin Sans FB
+color: #077545
+
+welcome:
+font: [Mishaland]
+color: #077545
+
+to face pass:
+font: Monotype Corsiva
+color: #077545

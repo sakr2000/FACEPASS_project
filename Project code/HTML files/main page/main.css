@@ -1,0 +1,151 @@
+body {
+    margin: 0px;
+}
+
+.top-right{
+    display: inline-flex;
+    margin-top: 40px;
+    margin-left: 50px;
+    height: 100px;
+}
+
+#logo {
+    position:absolute;
+}
+
+#logo img{
+    width: 100px;
+    height: 100px;
+}
+
+#text {
+    position: relative;
+    font-family: Berlin Sans FB;
+    color: #077545;
+    font-size: 20px;
+    margin-left: 96px;
+    padding-top: 40px;
+    transform: scaleY(1.5);
+    letter-spacing: 1.5px;
+    
+}
+
+.top-left {
+    display: inline-flex;
+    float: right;
+    margin-right: 50px;
+    margin-top: 60px;
+}
+
+.top-left img{
+    height: 50px;
+    width: 50px;
+}
+
+
+.top-left span{
+    font-family: Berlin Sans FB;
+    color: #077545;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-left: 10px;
+    transform: scaleY(1.2);
+    letter-spacing: 1.5px;
+}
+
+.middle {
+    margin-left: 540px;
+    margin-top: 30px;
+}
+#s1 {
+    font-family: Mishaland;
+    color: #077545;
+    font-size: 60px;
+}
+
+#s2 {
+    font-family: Monotype Corsiva;
+    color: #077545;
+    font-size: 60px;
+}
+
+.photo img{
+    width: 200px;
+    height: 200px;
+    margin-left: 659px;
+    margin-top: 60px;
+}
+
+.last {
+    display: flex;
+}
+
+.last img {
+    width: 60px;
+    height: 60px;
+    margin-top: 60px;
+    margin-left: 336px;
+}
+
+@media screen and (max-width:420px)
+{
+    .top-right{
+        margin-top: 20px;
+        margin-left: 15px;
+        height: 50px;
+    }
+
+    #logo img{
+        width: 60px;
+        height: 60px;
+    }
+
+    #text {
+        font-size: 10px;
+        margin-left: 58px;
+        padding-top: 25px;
+    }
+
+    .top-left {
+        margin-right: 15px;
+        margin-top: 35px;
+    }
+
+    .top-left img{
+        height: 30px;
+        width: 30px;
+    }
+
+    .top-left span{
+        font-size: 10px;
+        padding-top: 10px;
+        padding-left: 5px;
+    }
+
+    .middle {
+        margin-left: 135px;
+        margin-top: 30px;
+    }
+    #s1 {
+        font-size: 25px;
+    }
+    
+    #s2 {
+        font-size: 15px;
+    }
+
+    .photo img{
+        width: 100px;
+        height: 100px;
+        margin-left: 157px;
+        margin-top: 40px;
+    }
+
+    .last img {
+        width: 30px;
+        height: 30px;
+        margin-top: 60px;
+        margin-left: 80px;
+        margin-bottom: 20px;
+    }
+}
