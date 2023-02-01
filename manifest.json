@@ -1,0 +1,9 @@
+{
+  "name": "FacePass Demo",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Unlock websites with your face ",
+  "action": {
+    "default_popup": "HTML/websites page/sites.html"
+  }
+}

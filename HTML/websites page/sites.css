@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+body {
+  width: 400px;
+  height: 600px;
+}
 
 img {
   width: 50px;
@@ -24,19 +28,19 @@ nav .back {
   justify-content: center;
 }
 nav .back img {
-  width: 40px;
+  width: 30px;
   padding: 5px;
   transition: width 0.5s;
 }
 nav .back img:hover {
-  width: 45px;
+  width: 35px;
   cursor: pointer;
 }
 nav .page-name {
   width: 90%;
   text-align: center;
   font-family: "League Spartan", sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   color: #fff;
   padding: 10px;
 }
@@ -49,18 +53,18 @@ nav .page-name {
   display: flex;
   border: 2px solid black;
   border-radius: 10px;
-  height: 70px;
+  height: 60px;
   transition-property: all;
   transition: 0.3s;
 }
 .sites .site img {
-  width: 60px;
-  height: 60px;
-  padding: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
 }
 
 .sites .site .caption {
-  width: 80%;
+  width: 60%;
   padding: 10px;
   margin-left: 20px;
   font-family: "Libre Franklin", sans-serif;
@@ -73,11 +77,11 @@ nav .page-name {
 }
 .sites .site .remove {
   height: 100%;
-  width: 10%;
+  width: 20%;
   text-align: center;
 }
 .sites .site .remove i {
-  font-size: 25px;
+  font-size: 20px;
   padding: 20px;
   transition: 0.5s;
 }
@@ -86,7 +90,7 @@ nav .page-name {
 }
 .sites .site .remove i:hover {
   color: red;
-  font-size: 30px;
+  font-size: 25px;
   cursor: pointer;
 }
 .add-site {
