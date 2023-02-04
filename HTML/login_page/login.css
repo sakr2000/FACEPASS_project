@@ -118,7 +118,7 @@ input {
 @media screen and (max-width: 420px) {
     .logo {
         margin-left: 114.5px;
-        padding-top: 60px;
+        padding-top: 50px;
     }
 
     .logo img {
@@ -165,7 +165,7 @@ input {
         height: 50px;
         width: 250px;
         margin-left: 82px;
-        margin-top: 80px;
+        margin-top: 60px;
         font-size: 30px;
     } 
     .new{
