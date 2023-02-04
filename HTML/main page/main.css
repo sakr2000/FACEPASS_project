@@ -1,12 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    margin: 0px;
+    width: 400px;
+    height: 600px;
 }
 
 .top-right{
     display: inline-flex;
-    margin-top: 40px;
-    margin-left: 50px;
-    height: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 65px;
 }
 
 #logo {
@@ -14,17 +20,17 @@ body {
 }
 
 #logo img{
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
 }
 
 #text {
     position: relative;
     font-family: Berlin Sans FB;
     color: #077545;
-    font-size: 20px;
-    margin-left: 96px;
-    padding-top: 40px;
+    font-size: 15px;
+    margin-left: 58px;
+    padding-top: 22px;
     transform: scaleY(1.5);
     letter-spacing: 1.5px;
     
@@ -33,47 +39,47 @@ body {
 .top-left {
     display: inline-flex;
     float: right;
-    margin-right: 50px;
-    margin-top: 60px;
+    margin-right: 20px;
+    margin-top: 37px;
 }
 
 .top-left img{
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
 }
 
 
 .top-left span{
     font-family: Berlin Sans FB;
     color: #077545;
-    font-size: 20px;
-    padding-top: 15px;
-    padding-left: 10px;
+    font-size: 15px;
+    padding-top: 7px;
+    padding-left: 5px;
     transform: scaleY(1.2);
     letter-spacing: 1.5px;
 }
 
 .middle {
-    margin-left: 540px;
-    margin-top: 30px;
+    margin-left: 70.16px;
+    margin-top: 50px;
 }
 #s1 {
     font-family: Mishaland;
     color: #077545;
-    font-size: 60px;
+    font-size: 40px;
 }
 
 #s2 {
     font-family: Monotype Corsiva;
     color: #077545;
-    font-size: 60px;
+    font-size: 30px;
 }
 
 .photo img{
-    width: 200px;
-    height: 200px;
-    margin-left: 659px;
-    margin-top: 60px;
+    width: 140px;
+    height: 140px;
+    margin-left: 130px;
+    margin-top: 70px;
 }
 
 .last {
@@ -81,71 +87,9 @@ body {
 }
 
 .last img {
-    width: 60px;
-    height: 60px;
-    margin-top: 60px;
-    margin-left: 336px;
+    width: 40px;
+    height: 40px;
+    margin-top: 70px;
+    margin-left: 70px;
 }
 
-@media screen and (max-width:420px)
-{
-    .top-right{
-        margin-top: 20px;
-        margin-left: 15px;
-        height: 50px;
-    }
-
-    #logo img{
-        width: 60px;
-        height: 60px;
-    }
-
-    #text {
-        font-size: 10px;
-        margin-left: 58px;
-        padding-top: 25px;
-    }
-
-    .top-left {
-        margin-right: 15px;
-        margin-top: 35px;
-    }
-
-    .top-left img{
-        height: 30px;
-        width: 30px;
-    }
-
-    .top-left span{
-        font-size: 10px;
-        padding-top: 10px;
-        padding-left: 5px;
-    }
-
-    .middle {
-        margin-left: 135px;
-        margin-top: 30px;
-    }
-    #s1 {
-        font-size: 25px;
-    }
-    
-    #s2 {
-        font-size: 15px;
-    }
-
-    .photo img{
-        width: 100px;
-        height: 100px;
-        margin-left: 157px;
-        margin-top: 40px;
-    }
-
-    .last img {
-        width: 30px;
-        height: 30px;
-        margin-top: 60px;
-        margin-left: 80px;
-        margin-bottom: 20px;
-    }
-}
