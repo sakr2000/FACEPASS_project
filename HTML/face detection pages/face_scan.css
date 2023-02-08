@@ -72,7 +72,9 @@ video
         font-family: 'League Spartan', sans-serif;margin-top: 10px;
     
     }
-    #arrow{width: 10%;}
+    #arrow{
+        width: 10%;
+    }
     pre{
         margin-left: 130px;font-family: 'League Spartan', sans-serif;font-size: 24px;color: #0a6f48;margin-top: 300px;padding-bottom: 10px;} 
     button
