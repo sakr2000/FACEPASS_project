@@ -1,15 +1,30 @@
-#arrow{width: 50px;margin-top: 20px;
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 400px;
+    height: 600px;
+}
+#arrow
+{
+    width: 50px;margin-top: 20px;
     cursor: pointer;
-
-}h2{
+    margin-left: 10px;
+}
+h2
+{
     margin-left: 590px;
     color: #0a6f48;
     font-size: 30px;
     font-family: 'League Spartan', sans-serif;
 
-}p{
+}
+pre
+{
     margin-left: 620px;font-family: 'League Spartan', sans-serif;font-size: 24px;color: #0a6f48;margin-top: 368px;
-}button
+}
+button
 {
     margin-left: 610px;
     border: none;
@@ -24,58 +39,79 @@
     background-image: linear-gradient(to left,#006f43,#89dc66);
     transition: 0.6s;
     background-size: 100%;
-    position: absolute;}
+    position: absolute;margin-top: 20px;
+}
+#scan
+    {
+        width: 130px;margin-left: 630px;margin-top: 100px;position: absolute;
+    }
+#background
+    {
+        width: 350px;margin-bottom: 40px;margin-left: 520px;position: absolute;
+    }
+button:hover
+    {
+    border: 2px solid #89dc66; 
+    }
+a
+    {
+        text-decoration: none;
+        color: white;
+    }
+video
+    {
+        width: 390px;
+        clip-path: circle();position:absolute;margin-left: 500px;margin-top: 30px;
+
+    }
+@media screen and (max-width:768px){
+    h2{
+        margin-left: 100px;
+        color: #0a6f48;
+        font-size: 30px;
+        font-family: 'League Spartan', sans-serif;margin-top: 10px;
+    
+    }
+    #arrow{width: 10%;}
+    pre{
+        margin-left: 130px;font-family: 'League Spartan', sans-serif;font-size: 24px;color: #0a6f48;margin-top: 300px;padding-bottom: 10px;} 
+    button
+    {
+        margin-left: 110px;
+        width: 170px;
+        height: 40px;
+        font-size: 15px;
+    }
+    video
+    {
+        width: 250px;
+        clip-path: circle();position:absolute;margin-left: 80px;margin-top: 60px;
+    }
     #scan
-    {width: 130px;margin-left: 630px;margin-top: 100px;position: absolute;}
+    {
+        width: 110px;margin-left: 150px;margin-top: 100px;position: absolute;
+    }
     #background
     {
         width: 350px;margin-bottom: 40px;margin-left: 520px;position: absolute;
     }
-    button:hover{border: 2px solid #89dc66; }
-    a{
+    button:hover
+    {
+        border: 2px solid #89dc66;
+    }
+    a
+    {
         text-decoration: none;
         color: white;
-}
-video{
-        width: 390px;
-        clip-path: circle();position:absolute;margin-left: 500px;margin-top: 30px;
-
-}
-@media screen and (max-width:768px){
-    h2{
-        margin-left: 80px;
-        color: #0a6f48;
-        font-size: 30px;
-        font-family: 'League Spartan', sans-serif;
-    
-    }p{
-        margin-left: 110px;font-family: 'League Spartan', sans-serif;font-size: 24px;color: #0a6f48;margin-top: 368px;
-    }button
-    {
-        margin-left: 100px;
-        width: 170px;
-        height: 40px;
-        font-size: 15px;
-        }
-        video{
-        width: 390px;
-        clip-path: circle();position:absolute;margin-left: -18px;margin-top: 30px;
-
-}#scan
-{width: 130px;margin-left: 110px;margin-top: 100px;position: absolute;}
-
+    }
 }
 @media screen and (min-width:768px) and (max-width:1024px){
     h2{
         margin-left: 270px;
         color: #0a6f48;
         font-size: 30px;
-        font-family: 'League Spartan', sans-serif;margin-top: 150px;
-
-       
-    
-    }
-    p{
+        font-family: 'League Spartan', sans-serif;margin-top: 150px;}
+    pre{
         margin-left: 310px;font-family: 'League Spartan', sans-serif;font-size: 24px;color: #0a6f48;margin-top: 410px;
     }
     button
@@ -83,14 +119,14 @@ video{
         margin-left: 300px;
         width: 170px;
         height: 40px;
-        font-size: 15px;
+        font-size: 15px;margin-top: 20px;padding-top: 10px;
     }
-        video{
-        width: 390px;
-        clip-path: circle();position:absolute;margin-left: 180px;margin-top: 30px;
-
+    video{
+    width: 390px;
+    clip-path: circle();position:absolute;margin-left: 180px;margin-top: 30px;}
+    #scan
+    {
+    width: 130px;margin-left: 310px;margin-top: 100px;position: absolute;}
 }
-#scan{width: 130px;margin-left: 310px;margin-top: 100px;position: absolute;}
-}
 
- 
+
