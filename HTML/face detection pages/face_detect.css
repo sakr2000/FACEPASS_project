@@ -25,7 +25,7 @@ button{
     color: white;font-size: 20px;
     background-image: linear-gradient(to left,#006f43,#89dc66);
     margin-left: 500px;
-    margin-top: 70px;
+    margin-top: 50px;
     transition: 0.6s;
     background-size: 100%;
     
@@ -58,7 +58,7 @@ button:hover{
     margin-top: 60px;
 }
 #line3{
-    margin-left: 510px;
+    margin-left: 505px;
     font-family: 'League Spartan', sans-serif;
     margin-top: 12px;
     font-size: 30px;
