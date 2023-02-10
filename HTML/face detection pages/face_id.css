@@ -11,6 +11,9 @@ body {
     margin-top: 20px;cursor: pointer;
     margin-left: 10px;
 
+}#h{
+    margin-left: 640px;
+    margin-top: -29px;
 }
 h2 {
     margin-left: 570px;
@@ -19,13 +22,13 @@ h2 {
     font-family: 'League Spartan', sans-serif;
 }
 pre {
-    margin-left: 570px;
+    margin-left: 585px;
     font-family: 'League Spartan', sans-serif;
     font-size: 24px;
-    color: #0a6f48;
+    color: #0a6f48;margin-bottom: 30px;
 }
 button {
-        margin-left: 590px; 
+        margin-left: 610px; 
         border: none;
         width: 170px;
         height: 40px;
@@ -38,20 +41,20 @@ button {
         background-image: linear-gradient(to left,#006f43,#89dc66);
         transition: 0.6s;
         background-size: 100%;
-        position: absolute;margin-top: 20px;
+        position: absolute;margin-top: 10px;
 }
 #circle {
-    margin-left: 615px;
+    margin-left: 620px;
     width: 120px;
     position: relative;
-    margin-top: 120px;
+    margin-top: 100px;
     margin-bottom: 100px;
 }
 #background{
-        width: 190px;
+        width: 220px;
         position: absolute;
-        margin-top:80px;
-        margin-left: 580px;}
+        margin-top:50px;
+        margin-left: 570px;}
 button:hover{
     border: 2px solid #89dc66;
 } 
@@ -69,6 +72,13 @@ a{
         font-size: 30px;
         font-family: 'League Spartan', sans-serif;
         margin-top: 10px;
+    }
+    #h{
+        margin-left: 165px;
+        color: #0a6f48;
+        font-size: 30px;
+        font-family: 'League Spartan', sans-serif;
+        margin-top: -28px;
     }
     #circle{
         margin-left: 130px;
@@ -90,6 +100,8 @@ a{
     button{
         margin-left: 110px; 
         font-size: 15px;
+        margin-top: -8px;
+        
     }
 }
 @media screen and (min-width:768px) and (max-width:1024px){

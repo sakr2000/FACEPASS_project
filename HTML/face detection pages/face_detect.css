@@ -34,6 +34,13 @@ button:hover{
     box-shadow: 0 0 2px;transform: scale(1.1);
 
 }
+#h{
+    margin-left: 650px;
+    margin-top: -28px;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 30px;
+    color: #006f43;
+}
 
 #line1{
     margin-left: 580px;
@@ -69,12 +76,18 @@ color: white;
         margin-top: 100px;
         }  
         #line1{
-            margin-left: 60px;
+            margin-left: 70px;
             font-family: 'League Spartan', sans-serif;
             font-size: 38px;
             margin-bottom: 20px;
             color: #006f43;
         }
+        #h{
+            margin-left: 150px;
+            font-family: 'League Spartan', sans-serif;
+            font-size: 38px;
+            margin-top: -55px;
+            color: #006f43;}
         #line2{
             margin-left: 25px;
             font-family: 'League Spartan', sans-serif;font-size: 16px;

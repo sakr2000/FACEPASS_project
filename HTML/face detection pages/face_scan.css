@@ -22,7 +22,11 @@ h2
 }
 pre
 {
-    margin-left: 620px;font-family: 'League Spartan', sans-serif;font-size: 24px;color: #0a6f48;margin-top: 368px;
+    margin-left: 620px;font-family: 'League Spartan', sans-serif;font-size: 24px;color: #0a6f48;margin-top: 350px;
+}
+#h{
+    margin-left: 660px;
+    margin-top: -29px;
 }
 button
 {
@@ -43,7 +47,7 @@ button
 }
 #scan
     {
-        width: 130px;margin-left: 630px;margin-top: 100px;position: absolute;
+        width: 130px;margin-left: 620px;margin-top: 100px;position: absolute;
     }
 #background
     {
@@ -60,8 +64,8 @@ a
     }
 video
     {
-        width: 390px;
-        clip-path: circle();position:absolute;margin-left: 500px;margin-top: 30px;
+        width: 300px;
+        clip-path: circle();position:absolute;margin-left: 530px;margin-top: 50px;
 
     }
 @media screen and (max-width:768px){
@@ -71,6 +75,13 @@ video
         font-size: 30px;
         font-family: 'League Spartan', sans-serif;margin-top: 10px;
     
+    }
+    #h{
+        margin-left: 165px;
+        color: #0a6f48;
+        font-size: 30px;
+        font-family: 'League Spartan', sans-serif;
+        margin-top: -28px;
     }
     #arrow{
         width: 10%;
