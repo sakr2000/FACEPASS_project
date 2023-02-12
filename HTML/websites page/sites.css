@@ -5,6 +5,7 @@
 body {
   width: 400px;
   height: 600px;
+  overflow: scroll;
 }
 
 img {
