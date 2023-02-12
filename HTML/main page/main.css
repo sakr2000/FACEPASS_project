@@ -62,7 +62,8 @@ body {
   cursor: pointer;
 }
 
-.sidebar ul li ion-icon {
+.sidebar ul li img {
+  width: 25px;
   padding: 5px;
   margin-right: 20px;
 }
