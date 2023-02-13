@@ -1,0 +1,19 @@
+setting:
+font: League Spartan Regular
+color: white
+
+account, appearance, privacy:
+font: Franklin Gothic Medium
+color: black
+
+edit ..., change ... , light/dark:
+font: Franklin Gothic Medium
+color: #5c5a5a
+
+logout:
+font: League Spartan Regular
+color: #097645
+
+Gradient:
+left-color: #006f43
+right-color: #89dc66

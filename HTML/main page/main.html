@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset='utf-8'>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>Main Page</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    </head>
-    <body>
-        <div class="top-right">
-            <div id="logo">
-                <img src="images\green_logo.png">
-            </div>
-            <div id="text">
-                <span>FacePass</span>
-            </div>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Main Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  </head>
+  <body>
+    <div class="top-right">
+      <div id="logo">
+        <img src="images\green_logo.png" />
+      </div>
+      <div id="text">
+        <span>FacePass</span>
+      </div>
+    </div>
 
-        <div class="top-left">
-            <img src="images/username.png">
-            <span>Username</span>
-        </div>
+    <div class="top-left">
+      <img src="images/username.png" />
+      <span>Username</span>
+    </div>
 
-        <div class="middle">
-            <span id="s1">Welcome</span>
-            <span id="s2">to FacePass</span>
-        </div>
-        <div class="photo">
-            <img src="images\face-scanner (1).png">
-        </div>
-        <div class="last">
-            <a href="..\websites page\sites.html">
-                <img src="images\email.png">
-            </a>
-            <a href="#">
-                <img src="images\settings.png">
-            </a>
-            <a href="#">
-                <img src="images\questions.png">
-            </a>
-        </div>
-            
-    </body>
+    <div class="sidebar" id="sidebar">
+      <div class="header">
+        <img src="images/white_arrow.png" alt="back" id="closesidebar" />
+        <h2>Settings</h2>
+      </div>
+      <ul>
+        <li><img src="images/account.png" alt="" /> Account</li>
+        <li><img src="images/dark-mode (1).png" alt="" /> Appearance</li>
+        <li><img src="images/privacy.png" alt="" /> Privacy</li>
+      </ul>
+    </div>
+
+    <div class="middle">
+      <span id="s1">Welcome</span>
+      <span id="s2">to FacePass</span>
+    </div>
+    <div class="photo">
+      <img src="images\face-scanner (1).png" />
+    </div>
+    <div class="last">
+      <a href="../websites page/sites.html">
+        <img src="images\email.png" />
+      </a>
+      <a href="#" id="settingbtn">
+        <img src="images\settings.png" />
+      </a>
+      <a href="#">
+        <img src="images\questions.png" />
+      </a>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
