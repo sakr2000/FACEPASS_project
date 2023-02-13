@@ -4,6 +4,6 @@
   "manifest_version": 3,
   "description": "Unlock websites with your face ",
   "action": {
-    "default_popup": "HTML/face detection pages/face_detect.html"
+    "default_popup": "HTML/login_page/login.html"
   }
 }
