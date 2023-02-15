@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display:flex;
+    margin-left: 350px;
+}
+
+.sidebar {
+    background-color: #077545;
+    width: 250px;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    padding-top: 25px;
+}
+
+.header h2{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0px;
+}
+
+.header img {
+    margin-left: 40px;
+    padding-top: 3px;
+}
+
+.list{
+    padding-top: 60px;
+}
+
+.list div {
+    display: flex;
+}
+
+.list a {
+    padding-top: 3px;
+}
+
+.sidebar img {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.sidebar ul{
+    margin: 0;
+    list-style-type: none;
+}
+
+.sidebar li{
+    margin-bottom: 30px;
+}
+.sidebar a{
+    text-decoration: none;
+    color:white;;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.acc-content {
+    padding: 120px 100px 0px 100px;
+    border-right: 1px solid #077545;
+}
+
+.photo{
+    display: flex;
+    padding-bottom: 60px;
+}
+.photo img{
+    width: 50px;
+    height: 50px;
+}
+
+.photo div{
+    font-size: 17px;
+    padding-top: 17px;
+    padding-left:10px;
+}
+
+form input {
+    border-color: #077545;
+    border-style:solid;
+    border-radius: 8px;
+    height: 30px;
+}
+
+form label {
+    padding-left: 5px;
+    padding-bottom: 5px;
+    font-size: 12px;
+}
+.name{
+    display: flex;
+}
+
+.Fname {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.Lname {
+    display: flex;
+    flex-direction: column;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.btn {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.btn input{
+    border-radius: 8px;
+    border-style: none;
+    background-color: #077545;
+    color: white;
+    height: 40px;
+    width: 150px;
+    padding: 0px 15px 0px 15px;
+}
