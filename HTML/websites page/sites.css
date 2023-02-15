@@ -151,6 +151,9 @@ nav .page-name {
   font-size: 25px;
   font-weight: 600;
 }
+header{
+  margin-top: 10px;
+}
 .popup form{
   margin: 40px 0;
 }
