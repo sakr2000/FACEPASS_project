@@ -3,7 +3,14 @@
   "version": "1.0",
   "manifest_version": 3,
   "description": "Unlock websites with your face ",
+  "icons": {
+    "16": "icons/icon.png",
+    "32": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
   "action": {
     "default_popup": "HTML/login_page/login.html"
-  }
+  },
+  "permissions": ["storage"]
 }
