@@ -1,41 +1,102 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset='utf-8'>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>Login Page</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link rel='stylesheet' type='text/css' media='screen' href='login.css'>
-    </head>
-    <body>
-
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="login.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <!-- login page -->
+      <div class="login">
         <!--logo-->
         <div class="logo">
-            <img src="images\icon_with_circle.png">
-            <span>FacePass</span>
+          <img src="images\icon_with_circle.png" />
+          <span>FacePass</span>
         </div>
 
         <!--sign in-->
-        <div class="signin">
-            <span>Sign in with your Email</span>
+        <div class="top-massage">
+          <span>Sign in with your Email</span>
         </div>
 
         <!--email address-->
-        <input  class="address" type="email" placeholder="Email address">
-        
+        <div class="input-box">
+          <input id="login_email" type="email" required />
+          <label for="login_email">Email address</label>
+        </div>
 
         <!--password-->
-        <input  class="address" type="password" placeholder="Password">
+        <div class="input-box">
+          <input id="login_password" type="password" required />
+          <label for="login_password">Password</label>
+        </div>
 
         <!--forget password-->
         <a class="forget" href="#">forget password?</a>
 
         <!--login button-->
-        <a href="..\main page\main.html">
-            <input class="login" type="submit" value="login">
+        <a href="#">
+          <input class="login-btn" id="login_btn" type="submit" value="Login" />
         </a>
         <!--newuser? sign up-->
-        <span class="new">New user?</span>
-        <a class="up" href="#">Sign up</a>
-    </body>
+        <div class="new">
+          <span>New user?</span>
+          <a href="#" id="registerLink">Sign up</a>
+        </div>
+      </div>
+
+      <!-- register page -->
+      <div class="register">
+        <!--logo-->
+        <div class="logo">
+          <img src="images\icon_with_circle.png" />
+          <span>FacePass</span>
+        </div>
+
+        <div class="top-massage">
+          <span>Sign up in FacePass</span>
+        </div>
+
+        <!--username-->
+        <div class="input-box">
+          <input id="username" type="text" required />
+          <label for="username">Username</label>
+        </div>
+        <!--email address-->
+        <div class="input-box">
+          <input id="signup_email" type="email" required />
+          <label for="signup_email">Email address</label>
+        </div>
+        <!--password-->
+        <div class="input-box">
+          <input id="signup_password" type="password" required />
+          <label for="signup_password">Password</label>
+        </div>
+        <div class="input-box">
+          <input id="repassword" type="password" required />
+          <label for="repassword">confirm Password</label>
+        </div>
+
+        <!--login button-->
+        <a href="#">
+          <input
+            class="signup-btn"
+            id="signup_btn"
+            type="submit"
+            value="Sign-up"
+          />
+        </a>
+        <!--newuser? sign up-->
+        <div class="old">
+          <span>Already have an account ?</span>
+          <a href="#" id="loginLink">Log-in</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
 </html>
