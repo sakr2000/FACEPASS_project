@@ -28,17 +28,17 @@ nInput.onkeyup = ()=>{checkname();} //calling checkname function on name input k
 
 
 function checkname(){ //checkname function
-let pattern = /^([a-zA-Z ])$/; //pattern for validate email
+let pattern = /^([a-zA-Z ])$/; //pattern for validate name
 if(!eInput.value.match(pattern)){ 
-    if(nInput.value == ""){ //if pass is empty then add error and remove valid class
+    if(nInput.value == ""){ //if name is empty then add error and remove valid class
     nField.classList.add("error");
     nField.classList.remove("valid");
-    }else{ //if pass is empty then remove error and add valid class
+    }else{ //if name is empty then remove error and add valid class
     nField.classList.remove("error");
     nField.classList.add("valid");
     }
 }}
-//if eField and pField doesn't contains error class that mean user filled details properly
+//if eField and pField doesn't and nfield contains error class that mean user filled details properly
 if(!eField.classList.contains("error") && !pField.classList.contains("error")  && !nField.classList.contains("error")){
     window.location.href = form.getAttribute("action"); //redirecting user to the specified url which is inside action attribute of form tag
 }
