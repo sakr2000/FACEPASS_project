@@ -27,7 +27,7 @@ pInput.onkeyup = ()=>{checkurl();} //calling checkurl function on pass input key
 nInput.onkeyup = ()=>{checkname();} //calling checkname function on name input keyup
 
 
-function checkname(){ //checkPass function
+function checkname(){ //checkname function
 let pattern = /^([a-zA-Z ])$/; //pattern for validate email
 if(!eInput.value.match(pattern)){ 
     if(nInput.value == ""){ //if pass is empty then add error and remove valid class
