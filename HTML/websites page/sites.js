@@ -1,4 +1,4 @@
-function validateForm() {
+
     
 const form = document.querySelector("form");
 nField = form.querySelector(".name"),
@@ -23,7 +23,7 @@ nField.classList.remove("shake");
 }, 500);
 
 eInput.onkeyup = ()=>{checkEmail();} //calling checkEmail function on email input keyup
-pInput.onkeyup = ()=>{checkurl();} //calling checkurl function on pass input keyup
+pInput.onkeyup = ()=>{checkurl();} //calling checkurl function on url input keyup
 nInput.onkeyup = ()=>{checkname();} //calling checkname function on name input keyup
 
 
@@ -44,7 +44,7 @@ nField.classList.add("valid");
 }}
 //if eField and pField doesn't and nfield contains error class that mean user filled details properly
 if(!eField.classList.contains("error") && !pField.classList.contains("error")  && !nField.classList.contains("error")){
-window.location.href = form.getAttribute("action"); //redirecting user to the specified url which is inside action attribute of form tag
+window.location.href = form.getAttribute("action");   //add new website
 }
 
 //=============================================================================================
@@ -67,7 +67,7 @@ eField.classList.add("valid");
 }
 //if eField and pField and nField doesn't contains error class that mean user filled details properly
 if(!eField.classList.contains("error") && !pField.classList.contains("error")  && !nField.classList.contains("error")){
-window.location.href = form.getAttribute("action"); //redirecting user to the specified email which is inside action attribute of form tag
+window.location.href = form.getAttribute("action"); //add new website
 }
 }
 
@@ -90,10 +90,10 @@ pField.classList.add("valid");
 }
 //if eField and pField and nField doesn't contains error class that mean user filled details properly
 if(!eField.classList.contains("error") && !pField.classList.contains("error")  && !nField.classList.contains("error")){
-window.location.href = form.getAttribute("action"); //redirecting user to the specified url which is inside action attribute of form tag
+window.location.href = form.getAttribute("action"); //add new website
 }
 }};
-}
+
 //==================================================================================================
 // Create a new site when clicking on the "Add" button
 function newSite() {
