@@ -4,10 +4,10 @@
   "manifest_version": 3,
   "description": "Unlock websites with your face ",
   "icons": {
-    "16": "icons/icon.png",
-    "32": "icons/icon.png",
-    "48": "icons/icon.png",
-    "128": "icons/icon.png"
+    "16": "icons/Glogo.png",
+    "32": "icons/Glogo.png",
+    "48": "icons/Glogo.png",
+    "128": "icons/Glogo.png"
   },
   "action": {
     "default_popup": "HTML/main page/main.html"
