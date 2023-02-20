@@ -45,6 +45,12 @@ nField.classList.add("valid");
 //if eField and pField doesn't and nfield contains error class that mean user filled details properly
 if(!eField.classList.contains("error") && !pField.classList.contains("error")  && !nField.classList.contains("error")){
 window.location.href = form.getAttribute("action");   //add new website
+const btn = document.getElementById('add');
+btn.addEventListener('click', () => {
+const box = document.getElementsByClassName('popup')[0];
+// hides element
+box.style.visibility = 'hidden';
+});
 }
 
 //=============================================================================================
@@ -68,6 +74,12 @@ eField.classList.add("valid");
 //if eField and pField and nField doesn't contains error class that mean user filled details properly
 if(!eField.classList.contains("error") && !pField.classList.contains("error")  && !nField.classList.contains("error")){
 window.location.href = form.getAttribute("action"); //add new website
+const btn = document.getElementById('add');
+btn.addEventListener('click', () => {
+const box = document.getElementsByClassName('popup')[0];
+// hides element
+box.style.visibility = 'hidden';
+});
 }
 }
 
@@ -91,6 +103,12 @@ pField.classList.add("valid");
 //if eField and pField and nField doesn't contains error class that mean user filled details properly
 if(!eField.classList.contains("error") && !pField.classList.contains("error")  && !nField.classList.contains("error")){
 window.location.href = form.getAttribute("action"); //add new website
+const btn = document.getElementById('add');
+btn.addEventListener('click', () => {
+const box = document.getElementsByClassName('popup')[0];
+// hides element
+box.style.visibility = 'hidden';
+});
 }
 }};
 
@@ -105,15 +123,6 @@ function newSite() {
 document.getElementById("buton").addEventListener("click",function(){
 document.querySelector(".popup").style.display="flex";
 })
-
-//================================================================================
-// Click on a add button to hide the current div 
-const btn = document.getElementById('add');
-btn.addEventListener('click', () => {
-const box = document.getElementsByClassName('popup')[0];
-// hides element
-box.style.visibility = 'hidden';
-});
 
 //============================================================================
 // Click on a remove button to hide the current div 
