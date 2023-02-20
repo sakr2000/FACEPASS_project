@@ -6,71 +6,71 @@
     <title>Setting</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="acc.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <body>
-    <div class="container" id="container">
+    <div class="container">
         <div class="sidebar">
             <div class="header">
-                <img src="..\images/Wsetting.png">
-                <h2>Settings</h2>
+                <i class="bi bi-sliders"></i>
+                <span>Settings</span>
             </div>
+
             <div class="list">
                 <ul>
                     <li id="account">
                         <div class="account">
-                            <img src="../images/Waccount.png" alt=""/>
-                            <a href="acc.html">Account</a>
+                            <i class="bi bi-person-circle"></i>
+                            <span>Account</span>
                         </div>
                     </li>
-                    <li>
+                    <li id="password">
                         <div>
-                            <img src="../images/reset-password.png" alt=""/>
-                            <a href="pass.html">Change Password</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="../images/Wdark-mode.png" alt=""/> 
-                            <a href="">Appearance</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="../images/Wprivacy.png" alt=""/>
-                            <a href="">Privacy</a>
+                            <i class="bi bi-key"></i>
+                            <span>Change Password</span>
                         </div>
                     </li>
                 </ul>
             </div>
+
+            <div class="logout">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Log Out</span>
+            </div>
         </div>
-        <div class="acc-content">
-            <div class="photo">
+
+        <div class="acc-content" id="displayElement">
+            <div class="photo" id="photo">
                 <img src="..\images/user.png">
                 <div>
                     <label for="file"> Change Photo</label>
                     <input id="file" type="file" accept="image/png, image/jpeg, image/jpg" style="display:none;">
                 </div>
             </div>
-            <form>
+
+            <form id="form">
                 <div class="name">
                     <div class="Fname">
                         <label>First Name</label>
                         <input type="text">
                     </div>
+
                     <div class="Lname">
                         <label>Last Name</label>
                         <input type="text">
                     </div>
                 </div>
+
                 <div class="email">
                     <label>Email Address</label>
                     <input type="email">
                 </div>
+
                 <div class="btn">
                     <input type="submit" value="Save Changes">
                 </div>
             </form>
         </div>
-    </div>
+    <script src="../js/acc.js"></script>
 </body>
 </html>
