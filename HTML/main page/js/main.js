@@ -2,6 +2,7 @@ settingbtn = document.getElementById("settingbtn");
 sidebar = document.getElementById("sidebar");
 username = document.getElementById("username");
 closesidebar = document.getElementById("closesidebar");
+logout = document.getElementById("logout");
 
 account = document.getElementById("acc").onclick = function() {
   window.open("setting page/acc.html", "_blank");
@@ -19,6 +20,7 @@ closesidebar.addEventListener("click", function () {
   sidebar.classList.remove("active");
 });
 
+
 chrome.storage.local.get(["users"]).then((result) => {
   for (let i = 0; i < result.users.length; i++) {
     const element = result.users[i];
@@ -28,3 +30,7 @@ chrome.storage.local.get(["users"]).then((result) => {
     }
   }
 });
+
+logout.onclick = function () {
+  location.href = "../login_page/login.html";
+}
