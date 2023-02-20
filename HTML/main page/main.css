@@ -19,6 +19,11 @@ body {
   transform: translatex(-320px);
   transition: 1s;
 }
+
+.sidebar span{
+  padding-left: 10px;
+}
+
 .sidebar.active {
   transform: none;
 }

@@ -9,7 +9,7 @@ account = document.getElementById("acc").onclick = function() {
 
 
 password = document.getElementById("pass").onclick = function(){
-  window.open("setting page/pass.html", "_blank");
+  window.open("setting page/acc.html", "_blank");
 };
 
 settingbtn.addEventListener("click", function () {
