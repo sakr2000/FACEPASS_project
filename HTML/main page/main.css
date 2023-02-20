@@ -73,6 +73,27 @@ body {
   margin-right: 20px;
 }
 
+.logout {
+  position: absolute;
+  bottom: 0px;
+  padding-left: 95px;
+  padding-bottom: 30px;
+}
+
+.logout button{
+  border: none;
+  background-color: white;
+  font-size: 20px;
+  font-family: Franklin Gothic Medium;
+}
+
+.logout button:hover {
+  color:#077545;
+}
+.logout span{
+  padding-left: 5px;
+}
+
 .top-right {
   display: inline-flex;
   margin-top: 20px;

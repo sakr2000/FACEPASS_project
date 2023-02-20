@@ -53,10 +53,26 @@ body {
 .logout {
     position: absolute;
     bottom: 0px;
-    padding-left: 75px;
+    padding-left: 70px;
     padding-bottom: 30px;
+}
+
+.logout button{
+    border: none;
+    background-color:#077545;
     color: white;
     font-size: 20px;
+    padding: 10px;
+}
+
+.logout button:hover {
+    color:#077545;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.logout span{
+    padding-left: 5px;
 }
 
 /**-----------------------------------------------------------------------------------------------------------------------**/
