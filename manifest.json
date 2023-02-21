@@ -10,7 +10,7 @@
     "128": "icons/Glogo.png"
   },
   "action": {
-    "default_popup": "HTML/main page/main.html"
+    "default_popup": "HTML/login_page/login.html"
   },
   "permissions": ["storage"]
 }

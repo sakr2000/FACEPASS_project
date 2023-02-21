@@ -17,24 +17,20 @@
           <span>FacePass</span>
         </div>
 
-        <!--sign in-->
         <div class="top-massage">
           <span>Sign in with your Email</span>
         </div>
 
-        <!--email address-->
         <div class="input-box">
           <input id="login_email" type="email" required />
           <label for="login_email">Email address</label>
         </div>
 
-        <!--password-->
         <div class="input-box">
           <input id="login_password" type="password" required />
           <label for="login_password">Password</label>
         </div>
 
-        <!--forget password-->
         <a class="forget" href="#">forget password?</a>
 
         <!--login button-->
@@ -61,23 +57,36 @@
         </div>
 
         <!--username-->
-        <div class="input-box">
-          <input id="username" type="text" required />
-          <label for="username">Username</label>
+        <div class="input-area">
+          <div class="input-box" id="username">
+            <input type="text" required />
+            <label for="username">Username</label>
+          </div>
+          <div class="error error-txt" id="error"></div>
         </div>
+
         <!--email address-->
-        <div class="input-box">
-          <input id="signup_email" type="email" required />
-          <label for="signup_email">Email address</label>
+        <div class="input-area">
+          <div class="input-box" id="signup_email">
+            <input type="text" required />
+            <label for="signup_email">Email address</label>
+          </div>
+          <div class="error error-txt" id="error"></div>
         </div>
         <!--password-->
-        <div class="input-box">
-          <input id="signup_password" type="password" required />
-          <label for="signup_password">Password</label>
+        <div class="input-area">
+          <div class="input-box" id="signup_password">
+            <input type="password" required />
+            <label for="signup_password">Password</label>
+          </div>
+          <div class="error error-txt" id="error"></div>
         </div>
-        <div class="input-box">
-          <input id="repassword" type="password" required />
-          <label for="repassword">confirm Password</label>
+        <div class="input-area">
+          <div class="input-box" id="repassword">
+            <input type="password" required />
+            <label for="repassword">confirm Password</label>
+          </div>
+          <div class="error error-txt" id="error"></div>
         </div>
 
         <!--login button-->

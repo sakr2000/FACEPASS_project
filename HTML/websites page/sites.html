@@ -29,7 +29,7 @@
 <!-- websites section  -->
 
     <div class="sites">
-      <div class="container">
+      <div class="container" id="container">
 
         <div class="site">
           <img src="images/google (1).png" alt="google" />
@@ -120,15 +120,6 @@
           </div>
         </div>
 
-          <div class="site" hidden>
-            <img src="images/Udacity_logo.png" alt="google" />
-            <div class="caption">
-              <p class="site-name">Udacity</p>
-              <p class="site-email">username@gmail.com</p>
-            </div>
-            <div class="remove">
-              <i class="fa-sharp fa-solid fa-trash"></i>
-            </div>
       
     </div>
     </div>
@@ -156,7 +147,7 @@
       </div>
       <div class="field url">
         <div class="input-area">
-          <input type="url" placeholder="Site URL" id="url">
+          <input type="text" placeholder="Site URL" id="url">
           <i class="icon fas fa-link"></i>
           <i class="error error-icon fas fa-exclamation-circle"></i>
         </div>
@@ -170,7 +161,7 @@
         </div>
         <div class="error error-txt">Email/UserName can't be blank</div>
       </div>
-      <input type="submit" value="ADD" id="add" onclick="newSite()">
+      <input type="submit" value="ADD" id="add">
     </form>
   </div>
     </div>
