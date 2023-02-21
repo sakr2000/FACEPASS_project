@@ -6,6 +6,11 @@
     <title>Main Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://www.dafont.com/mishaland.font" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
   </head>
   <body>
     <div class="top-right">
@@ -28,13 +33,20 @@
         <h2>Settings</h2>
       </div>
       <ul>
-        <li id="acc"><img src="images/account.png" alt="" />Account</li>
-        <li id="pass">
-          <img src="images/Breset-password.png" />Change Password
+        <li id="acc">
+          <i class="bi bi-person-circle"></i>
+          <span>Account</span>
         </li>
-        <li><img src="images/dark-mode (1).png" alt="" />Appearance</li>
-        <li><img src="images/privacy.png" alt="" />Privacy</li>
+        <li id="pass">
+          <i class="bi bi-key"></i>
+          <span>Change Password</span>
+        </li>
       </ul>
+      <div class="logout" id="logout">
+        <button class="bi bi-box-arrow-right" type="submit">
+          <span>Logout</span>
+        </button>
+      </div>
     </div>
 
     <div class="middle">

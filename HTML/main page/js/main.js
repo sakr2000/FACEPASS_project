@@ -2,13 +2,14 @@ settingbtn = document.getElementById("settingbtn");
 sidebar = document.getElementById("sidebar");
 username = document.getElementById("username");
 closesidebar = document.getElementById("closesidebar");
+logout = document.getElementById("logout");
 
 account = document.getElementById("acc").onclick = function () {
   window.open("setting page/acc.html", "_blank");
 };
 
 password = document.getElementById("pass").onclick = function () {
-  window.open("setting page/pass.html", "_blank");
+  window.open("setting page/acc.html", "_blank");
 };
 
 settingbtn.addEventListener("click", function () {
@@ -29,3 +30,11 @@ chrome.storage.local.get(["users"]).then((result) => {
     }
   }
 });
+
+logout.onclick = function () {
+  location.href = "../login_page/login.html";
+};
+
+logout.onclick = function () {
+  location.href = "../login_page/login.html";
+};
