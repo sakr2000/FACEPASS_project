@@ -41,21 +41,8 @@ pInput = pField.querySelector("input");
       }
     }
   }
-  //if eField and pField doesn't and nfield contains error class that mean user filled details properly
-  if (
-    !eField.classList.contains("error") &&
-    !pField.classList.contains("error") &&
-    !nField.classList.contains("error")
-  ) {
-    
-    // window.location.href = form.getAttribute("action"); //add new website
-    const btn = document.getElementById("add");
-    btn.addEventListener("click", () => {
-      const box = document.getElementsByClassName("popup")[0];
-      // hides element
-      box.style.visibility = "hidden";
-    });
-  }
+  
+  
 
   //=============================================================================================
 
@@ -76,20 +63,7 @@ pInput = pField.querySelector("input");
       eField.classList.remove("error");
       eField.classList.add("valid");
     }
-    //if eField and pField and nField doesn't contains error class that mean user filled details properly
-    if (
-      !eField.classList.contains("error") &&
-      !pField.classList.contains("error") &&
-      !nField.classList.contains("error")
-    ) {
-      window.location.href = form.getAttribute("action"); //add new website
-      const btn = document.getElementById("add");
-      btn.addEventListener("click", () => {
-        const box = document.getElementsByClassName("popup")[0];
-        // hides element
-        box.style.visibility = "hidden";
-      });
-    }
+    
   }
 
   //================================================================================================
