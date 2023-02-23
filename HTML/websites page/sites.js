@@ -86,13 +86,8 @@ pInput = pField.querySelector("input");
       pField.classList.remove("error");
       pField.classList.add("valid");
     }
-    //if eField and pField and nField doesn't contains error class that mean user filled details properly
-    if (
-      !eField.classList.contains("error") &&
-      !pField.classList.contains("error") &&
-      !nField.classList.contains("error")
-    ) {
-      window.location.href = form.getAttribute("action"); 
+   
+      
       const btn = document.getElementById("add");
       btn.addEventListener("click", () => {
         const box = document.getElementsByClassName("popup")[0];
@@ -100,13 +95,14 @@ pInput = pField.querySelector("input");
         box.style.visibility = "hidden";
       });
     }
-  }
-;
+  
+
 
 //==================================================================================================
-// Create a new site when clicking on the "Add" button
+
 form.onsubmit = (e) => {
   e.preventDefault(); //preventing from form submitting
+ 
    //if email and password and name is blank then add shake class in it else call specified function
    nInput.value == "" ? nField.classList.add("shake", "error") : checkname();
    eInput.value == "" ? eField.classList.add("shake", "error") : checkEmail();
@@ -119,31 +115,42 @@ form.onsubmit = (e) => {
      nField.classList.remove("shake");
    }, 500);
    
-   checkEmail();
-   checkname();
-   checkurl();
-    let newSite = `        
+  
+
+   if (
+      !eField.classList.contains("error") &&
+      !pField.classList.contains("error") &&
+      !nField.classList.contains("error")
+    ) {
+
+    
+      const btn = document.getElementById("add");
+      btn.addEventListener("click", () => {
+        const box = document.getElementsByClassName("popup")[0];
+        // hides element
+        box.style.visibility = "hidden";
+      });
+      let newSite = `        
       <div class="site">
       <img src="images/google (1).png" alt="google" />
       <div class="caption">
       <p class="site-name">${nInput.value}</p>
       <p class="site-email">${eInput.value}</p>
     </div>
-    <div class="remove">
+    <div class="remove" >
       <i class="fa-sharp fa-solid fa-trash"></i>
     </div>
   </div>`;
     document.getElementById("container").innerHTML += newSite;
-
     var close = document.getElementsByClassName("remove");
     var i;
     for (i = 0; i < close.length; i++) {
       close[i].onclick = function () {
         var div = this.parentElement;
-        div.style.display = "none";
+        div.remove();
       };
-    }
-}
+    }  
+}}
 //=========================================================================
 //show popup when click on "+" button
 document.getElementById("buton").addEventListener("click", function () {
@@ -157,6 +164,11 @@ var i;
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function () {
     var div = this.parentElement;
-    div.style.display = "none";
+    div.remove();
   };
 }
+/* $( ".remove" ).click(function() {
+  $( ".site" ).remove();
+}); */
+
+
