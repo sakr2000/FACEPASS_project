@@ -155,7 +155,7 @@ login_btn.addEventListener("click", () => {
         window.location.href = "../main page/main.html";
       } else {
         setError(login_email, "");
-        setError(login_pass, "Email or Password is correct");
+        setError(login_pass, "Email or Password not correct");
       }
     }
   });
