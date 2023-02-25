@@ -21,14 +21,20 @@
           <span>Sign in with your Email</span>
         </div>
 
-        <div class="input-box">
-          <input id="login_email" type="email" required />
-          <label for="login_email">Email address</label>
+        <div class="input-area">
+          <div class="input-box" id="login_email">
+            <input type="text" required />
+            <label for="login_email">Email address</label>
+          </div>
+          <div class="error" id="error"></div>
         </div>
 
-        <div class="input-box">
-          <input id="login_password" type="password" required />
-          <label for="login_password">Password</label>
+        <div class="input-area">
+          <div class="input-box" id="login_password">
+            <input type="password" required />
+            <label for="login_password">Password</label>
+          </div>
+          <div class="error" id="error"></div>
         </div>
 
         <a class="forget" href="#">forget password?</a>
@@ -62,7 +68,7 @@
             <input type="text" required />
             <label for="username">Username</label>
           </div>
-          <div class="error error-txt" id="error"></div>
+          <div class="error" id="error"></div>
         </div>
 
         <!--email address-->
@@ -71,7 +77,7 @@
             <input type="text" required />
             <label for="signup_email">Email address</label>
           </div>
-          <div class="error error-txt" id="error"></div>
+          <div class="error" id="error"></div>
         </div>
         <!--password-->
         <div class="input-area">
@@ -79,17 +85,17 @@
             <input type="password" required />
             <label for="signup_password">Password</label>
           </div>
-          <div class="error error-txt" id="error"></div>
+          <div class="error" id="error"></div>
         </div>
         <div class="input-area">
           <div class="input-box" id="repassword">
             <input type="password" required />
             <label for="repassword">confirm Password</label>
           </div>
-          <div class="error error-txt" id="error"></div>
+          <div class="error" id="error"></div>
         </div>
 
-        <!--login button-->
+        <!--signup button-->
         <a href="#">
           <input
             class="signup-btn"

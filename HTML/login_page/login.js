@@ -22,40 +22,98 @@ loginLink.addEventListener("click", () => {
 });
 // =====================================================================================
 const setError = (element, message) => {
-  const parent = element.parentElemrnt;
+  const parent = element.parentElement;
   const error = parent.querySelector(".error");
   error.innerText = message;
-  element.classList.add("error");
+  element.classList.add("invalid");
 };
 const setValid = (element) => {
-  const parent = element.parentElemrnt;
+  const parent = element.parentElement;
   const error = parent.querySelector(".error");
   error.innerText = "";
-  element.classList.remove("error");
+  element.classList.remove("invalid");
 };
+
 function checkname() {
-  let re = /^([a-zA-Z ])$/;
-  if (!username.querySelector("input").value.match(re)) {
-    if (username.querySelector("input").value == "") {
-      setError(username, "Username can't be empty ");
-    } else {
-      setValid(username);
-    }
+  let re = /^[a-zA-Z][a-zA-Z0-9]{2,50}$/;
+  let name = username.querySelector("input").value;
+  if (name == "") {
+    setError(username, "Username can't be empty ");
+  } else if (!name.match(re)) {
+    setError(username, "Username not valid ");
+  } else {
+    setValid(username);
   }
 }
-console.log(username); // to be continued
-
-// username.querySelector("input").onkeyup = () => {
-//   checkname();
-// };
+function checkemail() {
+  let re = /^[a-zA-Z][a-zA-Z0-9]{2,50}@[a-zA-Z]{2,10}(\.[a-zA-Z]{2,4})+$/;
+  let email = signup_email.querySelector("input").value;
+  // check if email exists
+  // chrome.storage.local.get(["users"]).then((result) => {
+  //   for (let i = 0; i < result.users.length; i++) {
+  //     const element = result.users[i];
+  //     if (element.email == email) {
+  //       setError(signup_email, "Email address already exist");
+  //       break;
+  //     }
+  //   }
+  // });
+  if (email == "") {
+    setError(signup_email, "Email can't be empty ");
+  } else if (!email.match(re)) {
+    setError(signup_email, "Email not valid ");
+  } else {
+    setValid(signup_email);
+  }
+}
+function checkpassword() {
+  let pass = signup_pass.querySelector("input").value;
+  if (pass == "") {
+    setError(signup_pass, "Password can't be empty ");
+  } else if (pass.length < 8) {
+    setError(signup_pass, "Password length must be greater than 8");
+  } else {
+    setValid(signup_pass);
+  }
+}
+function confirmpassword() {
+  if (
+    signup_pass.querySelector("input").value !=
+    repassword.querySelector("input").value
+  ) {
+    setError(repassword, "Password doesn't match");
+  } else if (repassword.querySelector("input").value == "") {
+    setError(repassword, "This field can't be empty");
+  } else {
+    setValid(repassword);
+  }
+}
+username.querySelector("input").onkeyup = () => {
+  checkname();
+};
+signup_email.querySelector("input").onkeyup = () => {
+  checkemail();
+};
+signup_pass.querySelector("input").onkeyup = () => {
+  checkpassword();
+};
+repassword.querySelector("input").onblur = () => {
+  confirmpassword();
+};
 
 // ======================================================================================
 // adding new User
 let users = [];
 signup_btn.addEventListener("click", () => {
+  checkname();
+  checkemail();
+  checkpassword();
+  confirmpassword();
   if (
-    signup_pass.querySelector("input").value ==
-    repassword.querySelector("input").value
+    !username.classList.contains("invalid") &&
+    !signup_email.classList.contains("invalid") &&
+    !signup_pass.classList.contains("invalid") &&
+    !repassword.classList.contains("invalid")
   ) {
     let user = {
       name: username.querySelector("input").value,
@@ -70,8 +128,6 @@ signup_btn.addEventListener("click", () => {
       console.log(JSON.stringify(result.users));
     });
     container.classList.remove("active");
-  } else {
-    alert("The two passwords are not the same");
   }
 });
 
@@ -87,16 +143,19 @@ signup_btn.addEventListener("click", () => {
 // logging in
 login_btn.addEventListener("click", () => {
   chrome.storage.local.get(["users"]).then((result) => {
+    console.log(result.users);
     for (let i = 0; i < result.users.length; i++) {
       const element = result.users[i];
-      console.log(element);
       if (
-        element.email == login_email.value &&
-        element.password == login_pass.value
+        element.email == login_email.querySelector("input").value &&
+        element.password == login_pass.querySelector("input").value
       ) {
         result.users[i].active = true;
         chrome.storage.local.set({ users: result.users });
         window.location.href = "../main page/main.html";
+      } else {
+        setError(login_email, "");
+        setError(login_pass, "Email or Password is correct");
       }
     }
   });

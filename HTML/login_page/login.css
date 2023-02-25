@@ -108,7 +108,15 @@ body {
   border: none;
   outline: none;
 }
-
+.input-box.invalid {
+  border-bottom: #dc3545 2px solid;
+}
+.input-box.invalid label {
+  color: #dc3545;
+}
+.input-box.invalid input {
+  color: #dc3545;
+}
 .input-box input:focus ~ label,
 .input-box input:valid ~ label {
   top: -18px;
@@ -159,7 +167,7 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
-.error-txt {
+.error {
   color: #dc3545;
   text-align: left;
   margin-top: 5px;
