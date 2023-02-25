@@ -1,3 +1,4 @@
+let btn = document.getElementById("add");
 let sites_container = document.getElementById("container");
 const form = document.querySelector("form");
 (nField = form.querySelector(".name")),
@@ -6,6 +7,8 @@ const form = document.querySelector("form");
   (eInput = eField.querySelector("input")),
   (pField = form.querySelector(".url")),
   (pInput = pField.querySelector("input"));
+let popup = document.getElementsByClassName("popup")[0];
+let websites = [];
 
 eInput.onkeyup = () => {
   checkEmail();
@@ -17,6 +20,7 @@ nInput.onkeyup = () => {
   checkname();
 }; //calling checkname function on name input keyup
 
+//=============================================================================================
 function checkname() {
   //checkname function
   let pattern = /^([a-zA-Z ])$/; //pattern for validate name
@@ -32,8 +36,6 @@ function checkname() {
     }
   }
 }
-
-//=============================================================================================
 
 function checkEmail() {
   //checkEmail function
@@ -53,8 +55,6 @@ function checkEmail() {
     eField.classList.add("valid");
   }
 }
-
-//================================================================================================
 
 function checkurl() {
   //checkurl function
@@ -77,6 +77,52 @@ function checkurl() {
 }
 
 //==================================================================================================
+function display() {
+  sites_container.innerHTML = "";
+  websites.map((x, y) => {
+    return (sites_container.innerHTML += `        
+    <div class="site">
+    <img src="images/google (1).png" alt="google" />
+    <div class="caption">
+    <p class="site-name">${x.name}</p>
+    <p class="site-email">${x.email}</p>
+    </div>
+    <div class="remove" id="${y}">
+    <i class="fa-sharp fa-solid fa-trash"></i>
+    </div>
+    </div>`);
+  });
+}
+
+let activateDelete = () => {
+  let close = document.getElementsByClassName("remove");
+  for (let i = 0; i < close.length; i++) {
+    close[i].addEventListener("click", function () {
+      console.log(websites.splice(this.id, 1));
+      chrome.storage.local.get(["users"]).then((result) => {
+        for (let i = 0; i < result.users.length; i++) {
+          if (result.users[i].active == true) {
+            result.users[i].sites = websites;
+          }
+        }
+        chrome.storage.local.set({ users: result.users });
+      });
+      display();
+    });
+  }
+};
+
+(() => {
+  chrome.storage.local.get(["users"]).then((result) => {
+    for (let i = 0; i < result.users.length; i++) {
+      if (result.users[i].active == true) {
+        websites = result.users[i].sites;
+      }
+    }
+    display();
+    activateDelete();
+  });
+})();
 
 form.onsubmit = (e) => {
   e.preventDefault(); //preventing from form submitting
@@ -98,46 +144,26 @@ form.onsubmit = (e) => {
     !pField.classList.contains("error") &&
     !nField.classList.contains("error")
   ) {
-    const btn = document.getElementById("add");
-    btn.addEventListener("click", () => {
-      const box = document.getElementsByClassName("popup")[0];
-      // hides element
-      box.style.display = "none";
+    websites.push({
+      name: nInput.value,
+      email: eInput.value,
+      url: pInput.value,
     });
-    let newSite = `        
-      <div class="site">
-      <img src="images/google (1).png" alt="google" />
-      <div class="caption">
-      <p class="site-name">${nInput.value}</p>
-      <p class="site-email">${eInput.value}</p>
-    </div>
-    <div class="remove" >
-      <i class="fa-sharp fa-solid fa-trash"></i>
-    </div>
-  </div>`;
-    document.getElementById("container").innerHTML += newSite;
-    var close = document.getElementsByClassName("remove");
-    for (let i = 0; i < close.length; i++) {
-      close[i].onclick = function () {
-        var div = this.parentElement;
-        div.remove();
-      };
-    }
+    chrome.storage.local.get(["users"]).then((result) => {
+      for (let i = 0; i < result.users.length; i++) {
+        if (result.users[i].active == true) {
+          result.users[i].sites = websites;
+        }
+      }
+      chrome.storage.local.set({ users: result.users });
+    });
+    display();
+    activateDelete();
+    popup.style.display = "none";
   }
 };
 //=========================================================================
 //show popup when click on "+" button
-document.getElementById("buton").addEventListener("click", function () {
-  document.querySelector(".popup").style.display = "flex";
+document.getElementById("add_site").addEventListener("click", function () {
+  popup.style.display = "flex";
 });
-
-//============================================================================
-// Click on a remove button to hide the current div
-var close = document.getElementsByClassName("remove");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function () {
-    var div = this.parentElement;
-    div.remove();
-  };
-}

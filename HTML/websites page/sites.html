@@ -12,161 +12,67 @@
   <body>
     
     <nav>
-    <div class="container">
-      <div class="back">
-      <a href="..\main page\main.html">
+      <div class="container">
+        <div class="back">
+        <a href="..\main page\main.html">
 
-      <a href="../main page/main.html">    
+        <a href="../main page/main.html">    
 
-      <img src="images/white_arrow.png" alt="black_arrow" />
-      </a>
+        <img src="images/white_arrow.png" alt="black_arrow" />
+        </a>
+        </div>
+        <div class="page-name">
+        <h3>Websites</h3>
       </div>
-      <div class="page-name">
-      <h3>Websites</h3>
-    </div>
     </nav>
 
-<!-- websites section  -->
-
+    <!-- websites section  -->
     <div class="sites">
       <div class="container" id="container">
-
-        <div class="site">
-          <img src="images/google (1).png" alt="google" />
-          <div class="caption">
-          <p class="site-name">Google</p>
-          <p class="site-email">username@gmail.com</p>
-        </div>
-        <div class="remove">
-          <i class="fa-sharp fa-solid fa-trash"></i>
-        </div>
       </div>
-
-        <div class="site">
-          <img src="images/facebook (2).png" alt="site-image" />
-          <div class="caption">
-            <p class="site-name">Facebook</p>
-            <p class="site-email">username@gmail.com</p>
-          </div>
-          <div class="remove" >
-            <i class="fa-sharp fa-solid fa-trash"></i>
-          </div>
-        </div>
-
-        <div class="site">
-          <img src="images/huawei.png" alt="google" />
-          <div class="caption">
-            <p class="site-name">Huawei</p>
-            <p class="site-email">username@gmail.com</p>
-          </div>
-          <div class="remove" >
-            <i class="fa-sharp fa-solid fa-trash"></i>
-          </div>
-        </div>
-
-        <div class="site">
-          <img src="images/Udacity_logo.png" alt="google" />
-          <div class="caption">
-            <p class="site-name">Udacity</p>
-            <p class="site-email">username@gmail.com</p>
-          </div>
-          <div class="remove" >
-            <i class="fa-sharp fa-solid fa-trash"></i>
-          </div>
-
-      </div>
-
-        <div class="site">
-          <img src="images/google (1).png" alt="google" />
-          <div class="caption">
-          <p class="site-name">Google</p>
-          <p class="site-email">username@gmail.com</p>
-        </div>
-        <div class="remove">
-          <i class="fa-sharp fa-solid fa-trash"></i>
-        </div>
-        </div>
-      
-        <div class="site">
-          <img src="images/facebook (2).png" alt="site-image" />
-          <div class="caption" id="caption">
-            <p class="site-name">Facebook</p>
-            <p class="site-email">username@gmail.com</p>
-          </div>
-          <div class="remove">
-            <i class="fa-sharp fa-solid fa-trash"></i>
-          </div>
-        </div>
-
-        <div class="site">
-          <img src="images/huawei.png" alt="google" />
-          <div class="caption">
-            <p class="site-name">Huawei</p>
-            <p class="site-email">username@gmail.com</p>
-          </div>
-          <div class="remove" >
-            <i class="fa-sharp fa-solid fa-trash"></i>
-          </div>
-        </div>
-
-        <div class="site" >
-          <img src="images/Udacity_logo.png" alt="google" />
-          <div class="caption">
-            <p class="site-name">Udacity</p>
-            <p class="site-email">username@gmail.com</p>
-          </div>
-          <div class="remove" >
-            <i class="fa-sharp fa-solid fa-trash"></i>
-          </div>
-        </div>
-
-      
-    </div>
     </div>
 
-
-
-<!-- add-site section  -->
-
-    <div class="add-site">
-      <a href="#" class="button" id="buton">+</a>
-    </div>
+    <!-- add-site section  -->
+    <div class="add-site" id="add_site">+</div>
+          
     <div class="popup" >
       <div class="popup-content">
         <img src="../websites page/images/3circle_with_logo.png"  class="image">
         <!-- <i class="icon fas fa-close" id="close"></i> -->
         <header>Add Website</header>
-    <form action="#" >
-      <div class="field name">
-        <div class="input-area">
-          <input type="text" placeholder="Web Name">
-          <i class="icon fas fa-user"></i>
-          <i class="error error-icon fas fa-exclamation-circle"></i>
-        </div>
-        <div class="error error-txt">Name can't be blank</div>
+        <form action="#" >
+
+          <div class="field name">
+            <div class="input-area">
+              <input type="text" placeholder="Web Name">
+              <i class="icon fas fa-user"></i>
+              <i class="error error-icon fas fa-exclamation-circle"></i>
+            </div>
+            <div class="error error-txt">Name can't be blank</div>
+          </div>
+
+          <div class="field url">
+            <div class="input-area">
+              <input type="text" placeholder="Site URL" id="url">
+              <i class="icon fas fa-link"></i>
+              <i class="error error-icon fas fa-exclamation-circle"></i>
+            </div>
+            <div class="error error-txt">Link can't be blank</div>
+          </div>
+
+          <div class="field email">
+            <div class="input-area">
+              <input type="email" placeholder="Email / UserName">
+              <i class="icon fas fa-lock"></i>
+              <i class="error error-icon fas fa-exclamation-circle"></i>
+            </div>
+            <div class="error error-txt">Email/UserName can't be blank</div>
+          </div>
+
+          <input type="submit" value="ADD" id="add">
+        </form>
       </div>
-      <div class="field url">
-        <div class="input-area">
-          <input type="text" placeholder="Site URL" id="url">
-          <i class="icon fas fa-link"></i>
-          <i class="error error-icon fas fa-exclamation-circle"></i>
-        </div>
-        <div class="error error-txt">Link can't be blank</div>
-      </div>
-      <div class="field email">
-        <div class="input-area">
-          <input type="email" placeholder="Email / UserName">
-          <i class="icon fas fa-lock"></i>
-          <i class="error error-icon fas fa-exclamation-circle"></i>
-        </div>
-        <div class="error error-txt">Email/UserName can't be blank</div>
-      </div>
-      <input type="submit" value="ADD" id="add">
-    </form>
-  </div>
     </div>
-  </div>
-  <script src="jquery-3.6.3.min.js"></script>
-  <script src="sites.js"></script>
+    <script src="sites.js"></script>
   </body>
 </html>

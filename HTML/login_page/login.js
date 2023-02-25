@@ -120,6 +120,7 @@ signup_btn.addEventListener("click", () => {
       email: signup_email.querySelector("input").value,
       password: signup_pass.querySelector("input").value,
       active: false,
+      sites: [],
     };
     users.push(user);
     console.log(users);
