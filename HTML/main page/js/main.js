@@ -32,9 +32,13 @@ chrome.storage.local.get(["users"]).then((result) => {
 });
 
 logout.onclick = function () {
-  location.href = "../login_page/login.html";
-};
-
-logout.onclick = function () {
+  chrome.storage.local.get(["users"]).then((result) => {
+    if (result.users) {
+      for (let i = 0; i < result.users.length; i++) {
+        result.users[i].active = false;
+      }
+      chrome.storage.local.set({ users: result.users });
+    }
+  });
   location.href = "../login_page/login.html";
 };

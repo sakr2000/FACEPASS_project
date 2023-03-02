@@ -104,6 +104,10 @@ repassword.querySelector("input").onblur = () => {
 // ======================================================================================
 // adding new User
 let users = [];
+chrome.storage.local.get(["users"]).then((result) => {
+  console.log(result.users);
+  users = result.users;
+});
 signup_btn.addEventListener("click", () => {
   checkname();
   checkemail();
@@ -125,9 +129,6 @@ signup_btn.addEventListener("click", () => {
     users.push(user);
     console.log(users);
     chrome.storage.local.set({ users: users });
-    chrome.storage.local.get(["users"]).then((result) => {
-      console.log(JSON.stringify(result.users));
-    });
     container.classList.remove("active");
   }
 });

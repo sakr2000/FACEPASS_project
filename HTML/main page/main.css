@@ -20,7 +20,7 @@ body {
   transition: 1s;
 }
 
-.sidebar span{
+.sidebar span {
   padding-left: 10px;
 }
 
@@ -80,17 +80,20 @@ body {
   padding-bottom: 30px;
 }
 
-.logout button{
+.logout button {
   border: none;
   background-color: white;
   font-size: 20px;
   font-family: Franklin Gothic Medium;
+  transition: 0.3s;
 }
 
 .logout button:hover {
-  color:#077545;
+  color: rgba(220, 13, 13, 0.934);
+  transform: scale(110%);
+  cursor: pointer;
 }
-.logout span{
+.logout span {
   padding-left: 5px;
 }
 
