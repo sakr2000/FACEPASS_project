@@ -5,7 +5,6 @@
 body {
   width: 400px;
   height: 600px;
-  overflow: scroll;
 }
 
 img {
@@ -131,12 +130,13 @@ nav .page-name {
   text-align: center;
 }
 .popup-content {
-  height: 500px;
-  width: 450px;
+  height: 480px;
+  width: 330px;
   background: white;
   padding: 20px;
   border-radius: 5px;
   position: relative;
+  left: 15px;
 }
 ::selection {
   color: #fff;
@@ -202,9 +202,10 @@ form .field.error input {
 .field .input-area i {
   position: absolute;
   top: 50%;
-  font-size: 18px;
+  font-size: 20px;
   pointer-events: none;
   transform: translateY(-50%);
+  left: 3px;
 }
 .input-area .icon {
   left: 15px;
@@ -212,7 +213,7 @@ form .field.error input {
   transition: color 0.2s ease;
 }
 .input-area .error-icon {
-  right: 15px;
+  right: -290px;
   color: #dc3545;
 }
 form input:focus ~ .icon,
@@ -261,10 +262,11 @@ form input[type="submit"] {
   background: linear-gradient(to left, #006f43, #89dc66);
   cursor: pointer;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 form input[type="submit"]:hover {
   background: linear-gradient(to left, #044128, #89dc66);
+  transform: scale(105%);
 }
 .sign-txt {
   margin-top: -20px;
