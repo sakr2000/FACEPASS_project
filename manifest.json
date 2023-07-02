@@ -12,5 +12,8 @@
   "action": {
     "default_popup": "HTML/login_page/login.html"
   },
-  "permissions": ["storage"]
+  "permissions": ["storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  }
 }
