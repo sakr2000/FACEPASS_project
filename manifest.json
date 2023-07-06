@@ -1,5 +1,5 @@
 {
-  "name": "FacePass Demo",
+  "name": "FacePass",
   "version": "1.0",
   "manifest_version": 3,
   "description": "Unlock websites with your face ",
@@ -12,8 +12,16 @@
   "action": {
     "default_popup": "HTML/login_page/login.html"
   },
-  "permissions": ["storage", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.facebook.com/*"],
+      "js": ["contentScript.js"],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ],
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "permissions": ["storage", "tabs", "activeTab", "scripting"]
 }
