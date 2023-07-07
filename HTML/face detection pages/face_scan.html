@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="face_scan.css">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400;500;600&display=swap" rel="stylesheet">
-    
-</head>
-<body>
-    <div><a href="face_detect.html"> <img src="images/back_arrow.png" alt="" srcset="" id="arrow"></a>
-    <h2>Face </h2>
-    <h2 id="h">recognition</h2>
-    <video src="" id="video"><img src="images/bbackground.svg.png" alt="" srcset="" id="background"></video>
-    <img src="images/white_scan.png" alt="" srcset="" id="scan"></div>
-    <div>
-    <pre>Scan your face</pre><button><a href="face_id.html">continue</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="face_scan.css" />
+    <title>Face scan</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Face Scan</h1>
+    <div class="vid-container">
+      <video src="" id="video"></video>
+      <img src="images/white_scan.png" alt="" srcset="" class="image-lens" />
     </div>
-<script src="face_recognition.js"></script>
-</body>
+    <canvas id="canvas" width="950" height="850" style="display: none"></canvas>
+    <div class="btn-container">
+      <pre>Scan your face to unlock login</pre>
+      <button id="scanbtn">SCAN</button>
+    </div>
+    <script src="face_scan.js"></script>
+  </body>
 </html>
