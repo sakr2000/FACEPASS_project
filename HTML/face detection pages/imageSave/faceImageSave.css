@@ -1,0 +1,68 @@
+.arrow {
+  width: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  display: block;
+  font-size: 50px;
+  text-align: center;
+  color: #0a6f48;
+  font-family: "League Spartan", sans-serif;
+}
+pre {
+  font-family: "League Spartan", sans-serif;
+  font-size: 24px;
+  color: #0a6f48;
+}
+button {
+  border: none;
+  width: 200px;
+  height: 50px;
+  font-family: "League Spartan", sans-serif;
+  border-radius: 20px;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  background-image: linear-gradient(to left, #006f43, #89dc66);
+  transition: 0.6s;
+  background-size: 100%;
+  margin-top: 20px;
+}
+
+.vid-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.image-lens {
+  width: 190px;
+  margin-top: 7%;
+  position: absolute;
+}
+
+button:hover {
+  border: 2px solid #89dc66;
+  cursor: pointer;
+  transform: scale(110%);
+}
+
+video {
+  width: 440px;
+  clip-path: circle();
+  margin-top: 50px;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
