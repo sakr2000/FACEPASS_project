@@ -107,6 +107,12 @@ let users = [];
 chrome.storage.local.get(["users"]).then((result) => {
   console.log(result.users);
   users = result.users;
+  for (let i = 0; i < result.users.length; i++) {
+    const element = result.users[i];
+    if (element.active == true) {
+      window.location.href = "../main page/main.html";
+    }
+  }
 });
 signup_btn.addEventListener("click", () => {
   checkname();
@@ -133,15 +139,6 @@ signup_btn.addEventListener("click", () => {
   }
 });
 
-// chrome.storage.onChanged.addListener((changes, namespace) => {
-//   for (let [key, { oldValue, newValue }] of Object.entries(changes)) {
-//     console.log(
-//       `Storage key "${key}" in namespace "${namespace}" changed.`,
-//       `Old value was "${oldValue}", new value is "${newValue}".`
-//     );
-//   }
-// });
-
 // logging in
 login_btn.addEventListener("click", () => {
   chrome.storage.local.get(["users"]).then((result) => {
@@ -154,6 +151,7 @@ login_btn.addEventListener("click", () => {
       ) {
         result.users[i].active = true;
         chrome.storage.local.set({ users: result.users });
+        chrome.storage.local.set({ activeUser: result.users[i] });
         window.location.href = "../main page/main.html";
       } else {
         setError(login_email, "");

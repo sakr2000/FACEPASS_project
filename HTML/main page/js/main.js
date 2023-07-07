@@ -19,14 +19,12 @@ closesidebar.addEventListener("click", function () {
   sidebar.classList.remove("active");
 });
 
-chrome.storage.local.get(["users"]).then((result) => {
-  if (result.users) {
-    for (let i = 0; i < result.users.length; i++) {
-      const element = result.users[i];
-      console.log(element);
-      if (element.active == true) {
-        username.innerHTML = element.name;
-      }
+chrome.storage.local.get(["activeUser"]).then((result) => {
+  if (result.activeUser) {
+    const element = result.activeUser;
+    console.log(element);
+    if (element.active == true) {
+      username.innerHTML = element.name;
     }
   }
 });
@@ -38,6 +36,7 @@ logout.onclick = function () {
         result.users[i].active = false;
       }
       chrome.storage.local.set({ users: result.users });
+      chrome.storage.local.set({ activeUser: {} });
     }
   });
   location.href = "../login_page/login.html";

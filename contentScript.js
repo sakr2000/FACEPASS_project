@@ -1,6 +1,7 @@
 const site = window.location.hostname;
+let authorizedLogin = false;
 
-let Add_Custom_Style = (css) =>
+let Add_Style = (css) =>
   (document.head.appendChild(document.createElement("style")).innerHTML = css);
 
 let sendmessage = (msg) => {
@@ -9,10 +10,7 @@ let sendmessage = (msg) => {
       console.log(response);
     };
 };
-function Create_Custom_Element(tag, attr_tag, attr_name, value) {
-  const custom_element = document.createElement(tag);
-  custom_element.setAttribute(attr_tag, attr_name);
-  custom_element.innerHTML = value;
+function Facepass_Btn() {
   let css_style = `
   #Facepass_btn {
     height: 50px;
@@ -26,31 +24,44 @@ function Create_Custom_Element(tag, attr_tag, attr_name, value) {
     font-size: 35px; 
     margin-bottom: 30px;
     transition: 0.5s;  
-}
+  }
 
 #Facepass_btn:hover {
   transform: scale(110%);
   cursor: pointer;
 }
 `;
-  Add_Custom_Style(css_style);
-  custom_element.addEventListener("click", () => {
+  const Element = document.createElement("button");
+  Element.setAttribute("id", "Facepass_btn");
+  Element.innerHTML = "Facepass";
+  Add_Style(css_style);
+  Element.addEventListener("click", () => {
     sendmessage("DO_SCAN");
   });
-  return custom_element;
+  return Element;
+}
+
+function facebook_test() {
+  let em = document.getElementById("email");
+  let ps = document.getElementById("pass");
+  let form = document.querySelector("form._9vtf");
+  em.style.display = "none";
+  ps.style.display = "none";
+  form.after(Facepass_Btn());
+  ps.parentElement.style.border = "none";
+  ps.parentElement.style.marginBottom = "20px";
 }
 
 if (site.includes("facebook.com")) {
-  setTimeout(() => {
-    let em = document.getElementById("email");
-    let ps = document.getElementById("pass");
-    let form = document.querySelector("form._9vtf");
-    em.style.display = "none";
-    ps.style.display = "none";
-    form.after(
-      Create_Custom_Element("button", "id", "Facepass_btn", "Facepass")
-    );
-    ps.parentElement.style.border = "none";
-    ps.parentElement.style.marginBottom = "20px";
-  }, 500);
+  chrome.storage.local.get(["authorizedLogin"]).then((result) => {
+    if (result.authorizedLogin) {
+      authorizedLogin = result.authorizedLogin;
+      console.log(authorizedLogin);
+    }
+    if (!authorizedLogin) {
+      setTimeout(() => {
+        facebook_test();
+      }, 100);
+    }
+  });
 }
