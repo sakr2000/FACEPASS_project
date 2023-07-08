@@ -41,8 +41,7 @@ async function postJSON(data) {
       if (result.activeUser) {
         const element = result.activeUser;
         if (incomingName.includes(element.name)) {
-          let m = "user SCANED , result : " + incomingName;
-          sendmessage(m);
+          sendmessage("user SCANED , result : " + incomingName);
           setTimeout(() => {
             window.close();
           }, 100);

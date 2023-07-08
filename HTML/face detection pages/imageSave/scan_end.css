@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+}
+.container a {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 5%;
+}
+.arrow {
+  display: block;
+  width: 70px;
+  transition: 0.3s;
+}
+.arrow:hover {
+  cursor: pointer;
+  width: 80px;
+}
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+h2 {
+  color: #0a6f48;
+  font-size: 40px;
+  font-family: "League Spartan", sans-serif;
+}
+pre {
+  font-family: "League Spartan", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #0a6f48;
+}
+button {
+  border: none;
+  width: 170px;
+  height: 40px;
+  font-family: "League Spartan", sans-serif;
+  text-transform: uppercase;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  background-image: linear-gradient(to left, #006f43, #89dc66);
+  transition: 0.3s;
+  background-size: 100%;
+  margin-top: 20px;
+}
+.circle {
+  width: 220px;
+  position: absolute;
+}
+.background {
+  width: 340px;
+}
+.text-container {
+  display: block;
+  margin-top: 50px;
+  text-align: center;
+}
+button:hover {
+  border: 2px solid #89dc66;
+  transform: scale(90%);
+}

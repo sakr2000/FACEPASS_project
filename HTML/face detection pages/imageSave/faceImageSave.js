@@ -26,6 +26,26 @@ async function postJSON(data) {
 
     const result = await response.json();
     console.log("Success:", result);
+    if (result.message.includes("saved successfully")) {
+      chrome.storage.local.get(["activeUser"]).then((r) => {
+        if (r.activeUser) {
+          r.activeUser.firstLogin = false;
+          console.log(r.activeUser);
+          chrome.storage.local.get(["users"]).then((result) => {
+            if (result.users) {
+              for (let i = 0; i < result.users.length; i++) {
+                if (r.activeUser.name == result.users[i].name) {
+                  result.users[i].firstLogin = false;
+                }
+              }
+              chrome.storage.local.set({ users: result.users });
+              chrome.storage.local.set({ activeUser: r.activeUser });
+            }
+          });
+          location.href = "scan_end.html";
+        }
+      });
+    }
   } catch (error) {
     console.error("Error:", error);
   }
@@ -34,7 +54,11 @@ async function postJSON(data) {
 document.getElementById("scanbtn").addEventListener("click", () => {
   context.drawImage(video, 0, 0, 980, 740);
   let image = canvas.toDataURL("image/");
-  const data = [{ image: image, username: "medooo" }];
-  console.log(data);
-  postJSON(data);
+  chrome.storage.local.get(["activeUser"]).then((r) => {
+    if (r.activeUser) {
+      const data = [{ image: image, username: r.activeUser.name }];
+      console.log(data);
+      postJSON(data);
+    }
+  });
 });
