@@ -130,6 +130,7 @@ signup_btn.addEventListener("click", () => {
       email: signup_email.querySelector("input").value,
       password: signup_pass.querySelector("input").value,
       active: false,
+      firstLogin: true,
       sites: [],
     };
     users.push(user);

@@ -1,0 +1,29 @@
+facepass:
+font: League Spartan light
+color: #006f43
+
+sign in with your email:
+font: League Spartan regular
+color: #6ea085
+
+email address, password:
+font: League Spartan extralight
+color: #067344
+size: 20pt
+
+login: 
+font: League Spartan medium
+color: white
+size: 30pt
+
+new user? signup:
+font: League Spartan / bold
+color: #6ea085
+
+Gradient:
+left-color: #006f43
+right-color: #89dc66
+
+roundend rectangle: 30px;
+height: 60px;
+width: 390px;
