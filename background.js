@@ -1,19 +1,26 @@
+let site = "";
 chrome.storage.local.set({ authorizedLogin: false });
 
 // on receiveing a message
 chrome.runtime.onMessage.addListener((message) => {
-  if (message.message == "DO_SCAN") {
+  if (message.message.includes("DO_SCAN")) {
     chrome.tabs.create({
       url: "chrome-extension://bhfpjlglfdpmlmjpomgppddpfbgcgmjd/HTML/face detection pages/face_scan.html",
       active: true,
     });
+
+    if (message.message == "DO_SCAN_facebook") {
+      site = "facebook.com";
+    } else if (message.message == "DO_SCAN_udemy") {
+      site = "udemy.com";
+    }
   }
 
   if (message.message.includes("SCANED")) {
     console.log(message);
     chrome.storage.local.set({ authorizedLogin: true });
-    // reload the facebook page
-    chrome.tabs.query({ url: "*://*.facebook.com/*" }, function (tabs) {
+    // reload the page
+    chrome.tabs.query({ url: `*://*.${site}/*` }, function (tabs) {
       chrome.tabs.reload(tabs[0].id);
     });
   }

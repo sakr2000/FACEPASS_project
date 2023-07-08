@@ -14,7 +14,10 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://*.facebook.com/*"],
+      "matches": [
+        "https://*.facebook.com/*",
+        "https://*.udemy.com/join/login-popup/*"
+      ],
       "js": ["contentScript.js"],
       "all_frames": true,
       "run_at": "document_start"
