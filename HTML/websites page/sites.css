@@ -124,7 +124,7 @@ nav .page-name {
   height: 100%;
   position: absolute;
   top: 0;
-  display: none;
+  display: flex;
   justify-self: center;
   align-items: center;
   text-align: center;
@@ -141,6 +141,30 @@ nav .page-name {
 ::selection {
   color: #fff;
   background: #5372f0;
+}
+.popup .popup-content .popup-close {
+  width: 40px;
+  height: 40px;
+  color: #006f43;
+  border: #32782f solid 1px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: 0.3s;
+}
+.popup .popup-content .popup-close:hover {
+  background-color: #dc3545;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transform: scale(90%);
 }
 .popup header {
   font-size: 25px;

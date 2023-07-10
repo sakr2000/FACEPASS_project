@@ -167,3 +167,7 @@ form.onsubmit = (e) => {
 document.getElementById("add_site").addEventListener("click", function () {
   popup.style.display = "flex";
 });
+//hide popup when click on "x" button
+document.getElementById("popup_close").addEventListener("click", function () {
+  popup.style.display = "none";
+});
