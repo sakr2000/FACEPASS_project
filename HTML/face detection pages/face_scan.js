@@ -1,4 +1,5 @@
 let video = document.getElementById("video");
+let scanText = document.getElementById("scanText");
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
 if (navigator.mediaDevices.getUserMedia);
@@ -45,8 +46,14 @@ async function postJSON(data) {
           setTimeout(() => {
             window.close();
           }, 100);
+        } else if (incomingName.includes("Unknown")) {
+          console.log(incomingName);
+          scanText.style.color = "#dc3545";
+          scanText.innerHTML = " Login NOT authorized ! Unknown user";
         } else {
           console.log(incomingName);
+          scanText.style.color = "#dc3545";
+          scanText.innerHTML = " Login NOT authorized ! Unauthorized user";
         }
       }
     });

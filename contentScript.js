@@ -54,11 +54,11 @@ if (site.includes("facebook.com")) {
         facebtn.addEventListener("click", () => {
           sendmessage("DO_SCAN_facebook");
         });
+        ps.parentElement.style.border = "none";
+        ps.parentElement.style.marginBottom = "20px";
         em.remove();
         ps.remove();
         form.after(facebtn);
-        ps.parentElement.style.border = "none";
-        ps.parentElement.style.marginBottom = "20px";
       }, 100);
     }
   });
@@ -75,6 +75,7 @@ if (site.includes("udemy.com")) {
         let form = document.querySelectorAll("form")[1];
         let section1 = form.previousSibling;
         let section2 = section1.previousSibling;
+
         let section3 = section2.previousSibling;
         let facebtn = Facepass_Btn(10);
         facebtn.addEventListener("click", () => {

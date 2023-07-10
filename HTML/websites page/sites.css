@@ -124,7 +124,7 @@ nav .page-name {
   height: 100%;
   position: absolute;
   top: 0;
-  display: flex;
+  display: none;
   justify-self: center;
   align-items: center;
   text-align: center;
