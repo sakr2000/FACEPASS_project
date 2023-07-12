@@ -5,7 +5,7 @@ chrome.storage.local.set({ authorizedLogin: false });
 chrome.runtime.onMessage.addListener((message) => {
   if (message.message.includes("DO_SCAN")) {
     chrome.tabs.create({
-      url: "chrome-extension://bhfpjlglfdpmlmjpomgppddpfbgcgmjd/HTML/face detection pages/face_scan.html",
+      url: "HTML/face detection pages/face_scan.html",
       active: true,
     });
 
