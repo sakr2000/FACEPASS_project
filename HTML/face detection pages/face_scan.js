@@ -15,16 +15,9 @@ if (navigator.mediaDevices.getUserMedia);
     });
 }
 
-let sendmessage = (msg) => {
-  chrome.runtime.sendMessage({ message: msg }),
-    (response) => {
-      console.log(response);
-    };
-};
-
 async function postJSON(data) {
   try {
-    const response = await fetch("http://127.0.0.1:5000/test-image", {
+    const response = await fetch(`http://127.0.0.1:5000/test-image`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -42,9 +35,8 @@ async function postJSON(data) {
       if (result.activeUser) {
         const element = result.activeUser;
         if (incomingName.includes(element.name)) {
-          sendmessage("user SCANED , result : " + incomingName);
           setTimeout(() => {
-            window.close();
+            location.href = "facepose.html";
           }, 100);
         } else if (incomingName.includes("Unknown")) {
           console.log(incomingName);

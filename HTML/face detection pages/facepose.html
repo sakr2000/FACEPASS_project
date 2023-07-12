@@ -4,24 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="face_scan.css" />
-    <title>Face scan</title>
+    <link rel="stylesheet" href="facepose.css" />
+    <title>Document</title>
     <link
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400;500;600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <h1>Step 1 : Face Scan</h1>
+    <h2>Step 2 : Liveness detection</h2>
     <div class="vid-container">
       <video src="" id="video"></video>
       <img src="images/white_scan.png" alt="" srcset="" class="image-lens" />
     </div>
     <canvas id="canvas" width="950" height="850" style="display: none"></canvas>
     <div class="btn-container">
-      <pre id="scanText">Scan your face to unlock login</pre>
-      <button id="scanbtn">SCAN</button>
+      <pre id="text_msg"><p>Please make sure you sit straight with your face in the white square .</p><p>Click Scan whenever you are ready. </p></pre>
+      <p class="result-msg">Now you are Looking : <p id="result_msg"></p></p>
+      <button id="scanbtn">Scan</button>
     </div>
-    <script src="face_scan.js"></script>
+    <script src="facepose.js"></script>
   </body>
 </html>
