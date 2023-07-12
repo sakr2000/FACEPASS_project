@@ -36,7 +36,7 @@ async function postJSON(data) {
         const element = result.activeUser;
         if (incomingName.includes(element.name)) {
           setTimeout(() => {
-            location.href = "facepose.html";
+            location.href = "headpose.html";
           }, 100);
         } else if (incomingName.includes("Unknown")) {
           console.log(incomingName);

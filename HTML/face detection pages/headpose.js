@@ -30,7 +30,7 @@ let sendmessage = (msg) => {
 
 async function postJSON(data) {
   try {
-    const response = await fetch("http://127.0.0.1:5000/test-facePose", {
+    const response = await fetch("http://127.0.0.1:5000/test-headPose", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,10 +39,10 @@ async function postJSON(data) {
     });
 
     const result = await response.json();
-    result_msg.innerHTML = result.facepose;
+    result_msg.innerHTML = result.headpose;
 
     if (
-      result.facepose == "Looking Right" &&
+      result.headpose == "Looking Right" &&
       message.innerHTML.includes("LOOK RIGHT")
     ) {
       sendmessage("user SCANED ");
@@ -50,7 +50,7 @@ async function postJSON(data) {
         window.close();
       }, 100);
     } else if (
-      result.facepose == "Looking Left" &&
+      result.headpose == "Looking Left" &&
       message.innerHTML.includes("LOOK LEFT")
     ) {
       sendmessage("user SCANED ");
@@ -58,7 +58,7 @@ async function postJSON(data) {
         window.close();
       }, 100);
     } else if (
-      result.facepose == "Looking Up" &&
+      result.headpose == "Looking Up" &&
       message.innerHTML.includes("LOOK UP")
     ) {
       sendmessage("user SCANED ");
