@@ -63,6 +63,27 @@ if (site.includes("facebook.com")) {
     }
   });
 }
+if (site.includes("github.com")) {
+  chrome.storage.local.get(["authorizedLogin"]).then((result) => {
+    if (result.authorizedLogin) {
+      authorizedLogin = result.authorizedLogin;
+      console.log(authorizedLogin);
+    }
+    if (!authorizedLogin) {
+      setTimeout(() => {
+        let form = document.querySelector("form");
+        let facebtn = Facepass_Btn(6);
+        facebtn.addEventListener("click", () => {
+          sendmessage("DO_SCAN_github");
+        });
+        form.after(facebtn);
+        form.parentElement.style.height = "100px";
+        form.parentElement.style.width = "330px";
+        form.remove();
+      }, 100);
+    }
+  });
+}
 
 if (site.includes("udemy.com")) {
   chrome.storage.local.get(["authorizedLogin"]).then((result) => {

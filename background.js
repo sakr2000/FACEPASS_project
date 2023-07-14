@@ -13,6 +13,8 @@ chrome.runtime.onMessage.addListener((message) => {
       site = "facebook.com";
     } else if (message.message == "DO_SCAN_udemy") {
       site = "udemy.com";
+    } else if (message.message == "DO_SCAN_github") {
+      site = "github.com";
     }
   }
 
