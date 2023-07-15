@@ -105,13 +105,17 @@ repassword.querySelector("input").onblur = () => {
 // adding new User
 let users = [];
 chrome.storage.local.get(["users"]).then((result) => {
-  console.log(result.users);
-  users = result.users;
-  for (let i = 0; i < result.users.length; i++) {
-    const element = result.users[i];
-    if (element.active == true) {
-      window.location.href = "../main page/main.html";
+  if (result.users) {
+    console.log(result.users);
+    users = result.users;
+    for (let i = 0; i < result.users.length; i++) {
+      const element = result.users[i];
+      if (element.active == true) {
+        window.location.href = "../main page/main.html";
+      }
     }
+  } else {
+    chrome.storage.local.set({ users: [] });
   }
 });
 signup_btn.addEventListener("click", () => {
