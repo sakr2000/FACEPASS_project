@@ -80,7 +80,7 @@ scanbtn.addEventListener("click", () => {
   setInterval(() => {
     context.drawImage(video, 0, 0, 980, 740);
     let image = canvas.toDataURL("image/");
-    const data = [{ image: image }];
+    const data = { image: image };
     postJSON(data);
   }, 500);
 });

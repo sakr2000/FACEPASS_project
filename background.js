@@ -1,7 +1,7 @@
 let site = "";
 chrome.storage.local.set({ authorizedLogin: false });
 
-// on receiveing a message
+// on receiving a message
 chrome.runtime.onMessage.addListener((message) => {
   if (message.message.includes("DO_SCAN")) {
     chrome.tabs.create({
@@ -28,7 +28,7 @@ chrome.runtime.onMessage.addListener((message) => {
   }
 });
 
-// when window is colsed
+// when window is closed
 chrome.windows.onRemoved.addListener(() => {
   chrome.storage.local.set({ authorizedLogin: false });
   chrome.storage.local.get(["users"]).then((result) => {

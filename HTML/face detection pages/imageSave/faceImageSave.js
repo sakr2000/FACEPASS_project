@@ -56,7 +56,7 @@ document.getElementById("scanbtn").addEventListener("click", () => {
   let image = canvas.toDataURL("image/");
   chrome.storage.local.get(["activeUser"]).then((r) => {
     if (r.activeUser) {
-      const data = [{ image: image, username: r.activeUser.name }];
+      const data = { image: image, username: r.activeUser.name };
       console.log(data);
       postJSON(data);
     }

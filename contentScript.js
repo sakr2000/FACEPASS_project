@@ -59,10 +59,11 @@ if (site.includes("facebook.com")) {
         em.remove();
         ps.remove();
         form.after(facebtn);
-      }, 100);
+      }, 200);
     }
   });
 }
+
 if (site.includes("github.com")) {
   chrome.storage.local.get(["authorizedLogin"]).then((result) => {
     if (result.authorizedLogin) {

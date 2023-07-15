@@ -1,19 +1,29 @@
-.arrow {
-  width: 50px;
-  margin-top: 20px;
-  cursor: pointer;
-  margin-left: 10px;
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+.backarrow a {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 5%;
+}
+.arrow {
+  display: block;
+  width: 70px;
+  transition: 0.3s;
+}
+.arrow:hover {
+  cursor: pointer;
+  width: 80px;
+}
 h1 {
   display: block;
   font-size: 50px;
   text-align: center;
+  margin-top: 30px;
   color: #0a6f48;
   font-family: "League Spartan", sans-serif;
 }

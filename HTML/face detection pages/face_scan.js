@@ -58,7 +58,7 @@ async function postJSON(data) {
 document.getElementById("scanbtn").addEventListener("click", () => {
   context.drawImage(video, 0, 0, 980, 740);
   let image = canvas.toDataURL("image/");
-  const data = [{ image: image }];
+  const data = { image: image };
   console.log(data);
   postJSON(data);
 });
