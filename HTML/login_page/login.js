@@ -104,6 +104,7 @@ repassword.querySelector("input").onblur = () => {
 // ======================================================================================
 // adding new User
 let users = [];
+// getting old values
 chrome.storage.local.get(["users"]).then((result) => {
   if (result.users) {
     console.log(result.users);
