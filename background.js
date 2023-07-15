@@ -41,3 +41,12 @@ chrome.windows.onRemoved.addListener(() => {
     }
   });
 });
+
+// on first install
+chrome.runtime.onInstalled.addListener(function (object) {
+  if (object.reason === chrome.runtime.OnInstalledReason.INSTALL) {
+    if (!chrome.storage.local.get(["users"])) {
+      chrome.storage.local.set({ users: [] });
+    }
+  }
+});
