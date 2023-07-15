@@ -4,18 +4,18 @@ username = document.getElementById("username");
 closesidebar = document.getElementById("closesidebar");
 logout = document.getElementById("logout");
 
-chrome.storage.local.get(["activeUser"]).then((r) => {
-  if (r.activeUser.firstLogin) {
-    window.open("../face detection pages/imageSave/starterPage.html", "_blank");
-  }
-});
-account = document.getElementById("acc").onclick = function () {
-  window.open("setting page/acc.html", "_blank");
-};
+// chrome.storage.local.get(["activeUser"]).then((r) => {
+//   if (r.activeUser.firstLogin) {
+//     window.open("../face detection pages/imageSave/starterPage.html", "_blank");
+//   }
+// });
+// account = document.getElementById("acc").onclick = function () {
+//   window.open("setting page/acc.html");
+// };
 
-password = document.getElementById("pass").onclick = function () {
-  window.open("setting page/acc.html", "_blank");
-};
+// password = document.getElementById("pass").onclick = function () {
+//   window.open("setting page/acc.html", "_blank");
+// };
 
 settingbtn.addEventListener("click", function () {
   sidebar.classList.add("active");

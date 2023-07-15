@@ -4,23 +4,23 @@ displayElement = document.getElementById("displayElement");
 password_page = document.getElementById("password_page");
 account_page = document.getElementById("account_page");
 
-account.onclick = () => {
-  account_page.style.display = "block";
-  password_page.style.display = "none";
-  account.style.color = "#077545";
-  account.style.backgroundColor = "white";
-  account.style.borderRadius = "20px 0px 0px 20px";
-  password.style = "none";
-};
+// account.onclick = () => {
+//   account_page.style.display = "block";
+//   password_page.style.display = "none";
+//   account.style.color = "#077545";
+//   account.style.backgroundColor = "white";
+//   account.style.borderRadius = "20px 0px 0px 20px";
+//   password.style = "none";
+// };
 
-password.onclick = () => {
-  account_page.style.display = "none";
-  password_page.style.display = "block";
-  password.style.color = "#077545";
-  password.style.backgroundColor = "white";
-  password.style.borderRadius = "20px 0px 0px 20px";
-  account.style = "none";
-};
+// password.onclick = () => {
+//   account_page.style.display = "none";
+//   password_page.style.display = "block";
+//   password.style.color = "#077545";
+//   password.style.backgroundColor = "white";
+//   password.style.borderRadius = "20px 0px 0px 20px";
+//   account.style = "none";
+// };
 
 /** ========================================================================================= **/
 

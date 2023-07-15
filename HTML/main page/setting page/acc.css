@@ -1,174 +1,87 @@
 body {
   margin: 0;
+  width: 400px;
+  height: 600px;
 }
-
 /**main div**/
 .container {
+  font-family: League Spartan Regular;
+}
+.head {
   display:flex;
-  margin-left: 350px;
-}
-/**sidebar element**/
-.header{
-  color:white;
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  padding-top: 30px;
-  text-align: center;
-}
-.sidebar {
-  font-family: 'Poppins', sans-serif;
-  background-color: #077545;
-  width: 250px;
-  height: 100vh;
-}
-.sidebar span{
-  padding-left: 5px;
-}
-.sidebar ul{
-  margin: 0;
-  list-style-type: none;
-}
-.list{
-  padding-top: 40px;
-  color:white;
-  font-size: 15px;
-}
-.list li{
-  padding: 10px;
+  color: white;
+  background-image: linear-gradient(to left, #006f43, #89dc66);
+  height: 50px;
   margin-bottom: 10px;
 }
-.logout {
-  position: absolute;
-  bottom: 0px;
-  padding-left: 70px;
-  padding-bottom: 30px;
+.head img {
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  margin-right:140px;
+  transition: 0.5s;
+  padding-top: 12px;
 }
-.logout button{
-  border: none;
-  background-color:#077545;
-  color: white;
-  font-size: 20px;
-  padding: 10px;
+.Edit span{
+  font-size: 17px;
 }
-.logout button:hover {
-  color:#077545;
-  background-color: white;
-  border-radius: 30px;
-}
-.logout span{
-  padding-left: 5px;
-}
-/**account page**/
-.display {
-  width: 590px;
-  border-right: 1px solid #077545;
-  padding-top: 120px;
-}
-#account_page {
-  padding-top: 50px;
-}
-.name {
-  padding-left: 160px;
-}
-form input {
-  border-color: #077545;
-  border-style:solid;
-  border-radius: 8px;
-  height: 30px;
-  width: 250px;
-}
-form label {
-  padding-left: 5px;
-  padding-bottom: 5px;
-  font-size: 12px;
-}
-.name{
-  /*display: flex;*/
-  justify-content: center;
-}
-.Fname {
+.username {
   display: flex;
   flex-direction: column;
-  margin-right: 50px;
-  padding-top: 10px;
-}
-.Lname {
-  display: flex;
-  flex-direction: column;
-  padding-top: 25px;
-}
-.btn {
-  margin-top: 50px;
-  text-align: center;
-}
-.btn input{
-  border-radius: 8px;
-  border-style: none;
-  background-color: #077545;
-  color: white;
-  height: 40px;
-  width: 150px;
-  padding: 0px 15px 0px 15px;
+  margin-left: 100px;
 }
 .input_error .error {
   margin-left: 5px;
 }
 .error {
   color:red;
+  padding-top: 5px;
+  text-align: center;
 }
-.Fname.invalid label,
-.Lname.invalid label {
+.username.invalid label {
   color: red;
 }
-.Fname.invalid input,
-.Lname.invalid input {
+.username.invalid input {
   color: #dc3545;
   border-color: #dc3545;
 }
-/**password page**/
-.photo{
+.photo {
   text-align: center;
 }
 .photo img{
-  width: 100px;
-  height: 100px;
+  height: 60px;
+  width: 60px;
 }
-.password {
-  padding-top: 50px;
-  padding-left: 120px;
+.Edit span{
+  margin-left:10px;
 }
-.password input {
+.Edit input {
   border-color: #077545;
   border-style:solid;
   border-radius: 8px;
-  height: 30px;
-  width: 350px;
+  height: 20px;
+  width: 200px;
 }
-.password label {
+.Edit label {
   font-size: 14px;
   padding: 0px 0px 5px 5px;
 }
 .current, .new, .confirm {
   display: flex;
   flex-direction: column;
+  margin-left: 100px;
+}
+.password{
+  margin-top: 50px;
+}
+.password .photo{
+  padding-bottom: 10px;
 }
 .new {
-  padding-top: 30px;
+  padding-top: 10px;
 }
 .confirm {
-  padding-top: 30px;
-}
-.btn2 {
-  padding-top: 60px;
-  text-align: center;
-}
-.btn2 button {
-  width: 150px;
-  height: 40px;
-  border: none;
-  background-color: #077545;
-  border-radius: 8px;
-  color: white;
+  padding-top: 10px;
 }
 .current.invalid label,
 .new.invalid label,
@@ -181,4 +94,22 @@ form label {
   color: #dc3545;
   border-color: #dc3545;
 }
-
+.btn {
+  text-align: center;
+  margin-top: 20px;
+}
+.btn input {
+  border-radius: 20px;
+  border-style: none;
+  background-color: #077545;
+  color: white;
+  height: 40px;
+  width: 120px;
+  padding: 0px 15px 0px 15px;
+}
+.btn input:hover {
+  background-image: linear-gradient(to right, #006f43, #89dc66);
+  border-radius: 40px;
+  height: 50px;
+  width: 140px;
+}
