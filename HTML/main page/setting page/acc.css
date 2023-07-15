@@ -4,124 +4,104 @@ body {
 
 /**main div**/
 .container {
-  display: flex;
+  display:flex;
   margin-left: 350px;
 }
-
 /**sidebar element**/
-.header {
-  color: white;
-  font-family: "Poppins", sans-serif;
+.header{
+  color:white;
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   padding-top: 30px;
   text-align: center;
 }
-
 .sidebar {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #077545;
   width: 250px;
   height: 100vh;
 }
-
-.sidebar span {
+.sidebar span{
   padding-left: 5px;
 }
-
-.sidebar ul {
+.sidebar ul{
   margin: 0;
   list-style-type: none;
 }
-
-.list {
+.list{
   padding-top: 40px;
-  color: white;
+  color:white;
   font-size: 15px;
 }
-
-.list li {
+.list li{
   padding: 10px;
   margin-bottom: 10px;
 }
-
 .logout {
   position: absolute;
   bottom: 0px;
   padding-left: 70px;
   padding-bottom: 30px;
 }
-
-.logout button {
+.logout button{
   border: none;
-  background-color: #077545;
+  background-color:#077545;
   color: white;
   font-size: 20px;
   padding: 10px;
 }
-
 .logout button:hover {
-  color: #077545;
+  color:#077545;
   background-color: white;
   border-radius: 30px;
 }
-
-.logout span {
+.logout span{
   padding-left: 5px;
 }
-
-/**===========================================================================================================**/
 /**account page**/
 .display {
   width: 590px;
   border-right: 1px solid #077545;
   padding-top: 120px;
 }
-
-.photo {
-  display: flex;
-  padding-bottom: 60px;
-  margin-left: 100px;
+#account_page {
+  padding-top: 50px;
 }
-.photo img {
-  width: 50px;
-  height: 50px;
+.name {
+  padding-left: 160px;
 }
-
-.photo div {
-  font-size: 17px;
-  padding-top: 17px;
-  padding-left: 10px;
-}
-
 form input {
   border-color: #077545;
-  border-style: solid;
+  border-style:solid;
   border-radius: 8px;
   height: 30px;
+  width: 250px;
 }
-
 form label {
   padding-left: 5px;
   padding-bottom: 5px;
   font-size: 12px;
 }
-.name {
-  display: flex;
+.name{
+  /*display: flex;*/
   justify-content: center;
 }
-
-.username {
+.Fname {
   display: flex;
   flex-direction: column;
   margin-right: 50px;
+  padding-top: 10px;
 }
-
+.Lname {
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+}
 .btn {
-  margin-top: 80px;
+  margin-top: 50px;
   text-align: center;
 }
-
-.btn input {
+.btn input{
   border-radius: 8px;
   border-style: none;
   background-color: #077545;
@@ -130,68 +110,58 @@ form label {
   width: 150px;
   padding: 0px 15px 0px 15px;
 }
-
 .input_error .error {
   margin-left: 5px;
 }
 .error {
+  color:red;
+}
+.Fname.invalid label,
+.Lname.invalid label {
   color: red;
 }
-.username.invalid label {
-  color: red;
-}
-.username.invalid input {
+.Fname.invalid input,
+.Lname.invalid input {
   color: #dc3545;
   border-color: #dc3545;
 }
-
-/**===============================================================================================================**/
 /**password page**/
-.photo2 {
+.photo{
   text-align: center;
 }
-.photo2 img {
+.photo img{
   width: 100px;
   height: 100px;
 }
-
 .password {
   padding-top: 50px;
   padding-left: 120px;
 }
-
 .password input {
   border-color: #077545;
-  border-style: solid;
+  border-style:solid;
   border-radius: 8px;
   height: 30px;
   width: 350px;
 }
-
 .password label {
   font-size: 14px;
   padding: 0px 0px 5px 5px;
 }
-.current,
-.new,
-.confirm {
+.current, .new, .confirm {
   display: flex;
   flex-direction: column;
 }
-
 .new {
   padding-top: 30px;
 }
-
 .confirm {
   padding-top: 30px;
 }
-
 .btn2 {
   padding-top: 60px;
   text-align: center;
 }
-
 .btn2 button {
   width: 150px;
   height: 40px;
@@ -200,7 +170,6 @@ form label {
   border-radius: 8px;
   color: white;
 }
-
 .current.invalid label,
 .new.invalid label,
 .confirm.invalid label {
@@ -212,3 +181,4 @@ form label {
   color: #dc3545;
   border-color: #dc3545;
 }
+

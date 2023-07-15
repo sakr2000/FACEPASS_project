@@ -45,68 +45,69 @@
       <div class="display" id="displayElement">
         <!--account page-->
         <div id="account_page">
-          <div class="photo" id="photo">
-            <img src="..\images/user.png" />
-            <div>
-              <label for="file"> Change Photo</label>
-              <input
-                id="file"
-                type="file"
-                accept="image/png, image/jpeg, image/jpg"
-                style="display: none"
-              />
-            </div>
+          <div class="photo">
+            <img src="../images/profile.png">
           </div>
-
+          <form id="form">
             <div class="name">
               <div class="input_error">
-                <div class="username" id="user_name">
-                  <label>User Name</label>
+                <div class="Fname" id="first_name">
+                  <label>First Name</label>
                   <input type="text" required/>
                 </div>
                 <div class="error" id="error"></div>
               </div>
-
-            <div class="btn">
-              <input id="save_btn" value="Save Changes" />
+              <div class="input_error">
+                <div class="Lname" id="last_name">
+                  <label>Last Name</label>
+                  <input type="text" required/>
+                </div>
+                <div class="error" id="error"></div>
+              </div>
             </div>
+            <div class="btn" id="save_btn">
+              <input type="submit" value="Save Changes" />
+            </div>
+          </form>
         </div>
+
 
         <!--=================================================================================-->
-        
-        <!--password page-->
-        <div id="password_page" style="display: none;">
-          <div class="photo2">
-            <img src="../images/password-logo.png">
-          </div>
-          <div class="password">
-              <div>
-                <div class="current" id="current_password">
-                  <label for="current">Current Password</label>
-                  <input id="current" type="password" required>
-                </div>
-                <div class="error" id="error"></div>
-              </div>
-              <div>
-                <div class="new" id="new_password">
-                  <label for="new">New Password</label>
-                  <input id="new" type="password" required>
-                </div>
-                <div class="error" id="error"></div>
-              </div>
-              <div>
-                <div class="confirm" id="confirm_password">
-                  <label for="confirm">Confirm Password</label>
-                  <input id="confirm" type="password" required>
-                </div>
-                <div class="error" id="error"></div>
-              </div>
-          </div>
-              <div class="btn2" id="pass_btn">
-                  <button type="submit">Save</button>
-              </div>
+
+      <!--password page-->
+      <div id="password_page" style="display: none;">
+        <div class="photo">
+          <img src="../images/password-logo.png">
         </div>
+        <div class="password">
+            <div>
+              <div class="current" id="current_password">
+                <label for="current">Current Password</label>
+                <input id="current" type="password" required>
+              </div>
+              <div class="error" id="error"></div>
+            </div>
+            <div>
+              <div class="new" id="new_password">
+                <label for="new">New Password</label>
+                <input id="new" type="password" required>
+              </div>
+              <div class="error" id="error"></div>
+            </div>
+            <div>
+              <div class="confirm" id="confirm_password">
+                <label for="confirm">Confirm Password</label>
+                <input id="confirm" type="password" required>
+              </div>
+              <div class="error" id="error"></div>
+            </div>
+        </div>
+            <div class="btn2" id="pass_btn">
+                <button type="submit">Save</button>
+            </div>
       </div>
+    </div>
+
     </div>
     <script src="acc.js"></script>
   </body>
