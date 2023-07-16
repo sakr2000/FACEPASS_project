@@ -82,7 +82,7 @@ function display() {
   websites.map((x, y) => {
     return (sites_container.innerHTML += `        
     <div class="site">
-    <img src="images/google (1).png" alt="google" />
+    <img src="images/globe-solid.png" alt="google" />
     <div class="caption">
     <p class="site-name">${x.name}</p>
     <p class="site-email">${x.email}</p>

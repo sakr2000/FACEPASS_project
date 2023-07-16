@@ -22,10 +22,20 @@ body {
 
 .sidebar span {
   padding-left: 10px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
 }
-
 .sidebar.active {
   transform: none;
+}
+.sidebar span:hover {
+  font-size: 25px;
+  color: #006f43;
+  cursor: pointer;
+}
+.sidebar span:hover img {
+  width: 30px;
 }
 .sidebar .header {
   background-image: linear-gradient(to left, #006f43, #89dc66);
@@ -42,7 +52,7 @@ body {
   width: 25px;
   padding: 5px;
   margin-right: 70px;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .sidebar .header img:hover {
@@ -61,24 +71,19 @@ body {
   transition: 0.5s;
 }
 
-.sidebar ul li:hover {
-  font-size: 25px;
-  color: #006f43;
-  cursor: pointer;
-}
-
 .sidebar ul li img {
   width: 25px;
   padding: 5px;
   margin-right: 20px;
+  transition: 0.3s;
 }
 
-#acc a{
+#acc a {
   text-decoration: none;
   color: #000;
 }
 
-#acc a:hover{
+#acc a:hover {
   color: #006f43;
 }
 .logout {
