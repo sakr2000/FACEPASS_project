@@ -8,33 +8,42 @@ body {
   font-family: League Spartan Regular;
 }
 .head {
-  display:flex;
+  display: flex;
   color: white;
   background-image: linear-gradient(to left, #006f43, #89dc66);
-  height: 50px;
+  height: 55px;
   margin-bottom: 10px;
+  align-items: center;
+}
+.head a {
+  width: 20%;
+  cursor: default;
+}
+.head h1 {
+  margin-left: 75px;
 }
 .head img {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   padding: 5px;
-  margin-right:140px;
-  transition: 0.5s;
+  margin-right: 140px;
+  transition: 0.4s;
   padding-top: 12px;
 }
-.Edit span{
-  font-size: 17px;
+.head img:hover {
+  cursor: pointer;
+  transform: scale(110%);
 }
 .username {
   display: flex;
   flex-direction: column;
-  margin-left: 100px;
+  align-items: center;
 }
 .input_error .error {
   margin-left: 5px;
 }
 .error {
-  color:red;
+  color: red;
   padding-top: 5px;
   text-align: center;
 }
@@ -46,35 +55,40 @@ body {
   border-color: #dc3545;
 }
 .photo {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
-.photo img{
+.photo img {
   height: 60px;
   width: 60px;
 }
-.Edit span{
-  margin-left:10px;
-}
+
 .Edit input {
   border-color: #077545;
-  border-style:solid;
+  border-style: solid;
   border-radius: 8px;
-  height: 20px;
-  width: 200px;
+  height: 25px;
+  width: 70%;
 }
 .Edit label {
   font-size: 14px;
   padding: 0px 0px 5px 5px;
+  font-weight: 600;
 }
-.current, .new, .confirm {
+.current,
+.new,
+.confirm {
   display: flex;
   flex-direction: column;
-  margin-left: 100px;
+  align-items: center;
 }
-.password{
-  margin-top: 50px;
+.password {
+  margin-top: 20px;
 }
-.password .photo{
+.password .photo {
   padding-bottom: 10px;
 }
 .new {
@@ -98,18 +112,64 @@ body {
   text-align: center;
   margin-top: 20px;
 }
-.btn input {
+.btn button {
   border-radius: 20px;
   border-style: none;
   background-color: #077545;
   color: white;
-  height: 40px;
-  width: 120px;
-  padding: 0px 15px 0px 15px;
+  height: 30px;
+  width: 150px;
+  padding: 0px 15px;
+  transition: 0.4s;
+  margin-bottom: 20px;
 }
-.btn input:hover {
+.btn button:hover {
   background-image: linear-gradient(to right, #006f43, #89dc66);
   border-radius: 40px;
-  height: 50px;
-  width: 140px;
+  transform: scale(95%);
+  cursor: pointer;
+}
+.collapsible {
+  background-color: white;
+  color: #099e62;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: solid 1px #099e62;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #006f43;
+  color: white;
+}
+.collapsible:hover::after {
+  color: white;
+}
+
+.collapsible:after {
+  content: "\25bc";
+  color: #099e62;
+  font-weight: bold;
+  float: right;
+  transition: 0.3s;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\25b2";
+  color: white;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
 }

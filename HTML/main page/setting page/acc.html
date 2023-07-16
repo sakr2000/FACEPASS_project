@@ -15,53 +15,60 @@
     <div class="container">
       <div class="head">
         <a href="../main.html">
-          <img src="../images/white_arrow.png" alt="back"/>
+          <img src="../images/white_arrow.png" alt="back" />
         </a>
         <h1>Setting</h1>
       </div>
       <div class="Edit">
         <div class="Uname">
-          <span>Edit username:</span>
-          <div class="photo">
-            <img src="../images/profile.png">
-          </div>
-          <div class="name">
-            <div class="input_error">
-              <div class="username" id="user_name">
-                <label>UserName</label>
-                <input type="text" required/>
+          <button class="collapsible">Change Username</button>
+          <div class="content">
+            <div class="photo">
+              <img src="../images/profile.png" />
+            </div>
+            <div class="name">
+              <div class="input_error">
+                <div class="username" id="user_name">
+                  <label>UserName</label>
+                  <input type="text" required />
+                </div>
+                <div class="error" id="error"></div>
               </div>
-              <div class="error" id="error"></div>
+            </div>
+            <div class="btn">
+              <button id="save_btn">Change Username</button>
             </div>
           </div>
         </div>
         <div class="password">
-          <span>Edit password:</span>
-          <div class="photo">
-            <img src="../images/password-logo.png">
+          <button class="collapsible">Change Password</button>
+          <div class="content">
+            <div class="photo">
+              <img src="../images/password-logo.png" />
+            </div>
+            <div class="current" id="current_password">
+              <label for="current">Current Password</label>
+              <input id="current" type="password" required />
+            </div>
+            <div class="error" id="error"></div>
+            <div>
+              <div class="new" id="new_password">
+                <label for="new">New Password</label>
+                <input id="new" type="password" required />
+              </div>
+              <div class="error" id="error"></div>
+            </div>
+            <div>
+              <div class="confirm" id="confirm_password">
+                <label for="confirm">Confirm Password</label>
+                <input id="confirm" type="password" required />
+              </div>
+              <div class="error" id="error"></div>
+            </div>
+            <div class="btn">
+              <button id="pass_btn">Change Password</button>
+            </div>
           </div>
-          <div class="current" id="current_password">
-            <label for="current">Current Password</label>
-            <input id="current" type="password" required>
-          </div>
-          <div class="error" id="error"></div>
-        </div>
-        <div>
-          <div class="new" id="new_password">
-            <label for="new">New Password</label>
-            <input id="new" type="password" required>
-          </div>
-          <div class="error" id="error"></div>
-        </div>
-        <div>
-          <div class="confirm" id="confirm_password">
-            <label for="confirm">Confirm Password</label>
-            <input id="confirm" type="password" required>
-          </div>
-          <div class="error" id="error"></div>
-        </div>
-        <div class="btn">
-          <input id="save_btn" type="submit" value="Save Changes" />
         </div>
       </div>
     </div>
