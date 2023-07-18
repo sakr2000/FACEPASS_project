@@ -37,6 +37,16 @@ const setValid = (element) => {
 function checkname() {
   let re = /^[a-zA-Z][a-zA-Z0-9]{2,50}$/;
   let name = username.querySelector("input").value;
+  // check if username exists
+  chrome.storage.local.get(["users"]).then((result) => {
+    for (let i = 0; i < result.users.length; i++) {
+      const element = result.users[i];
+      if (element.name == name) {
+        setError(username, "Username already exist");
+        break;
+      }
+    }
+  });
   if (name == "") {
     setError(username, "Username can't be empty ");
   } else if (!name.match(re)) {
@@ -49,15 +59,15 @@ function checkemail() {
   let re = /^[a-zA-Z][a-zA-Z0-9]{2,50}@[a-zA-Z]{2,10}(\.[a-zA-Z]{2,4})+$/;
   let email = signup_email.querySelector("input").value;
   // check if email exists
-  // chrome.storage.local.get(["users"]).then((result) => {
-  //   for (let i = 0; i < result.users.length; i++) {
-  //     const element = result.users[i];
-  //     if (element.email == email) {
-  //       setError(signup_email, "Email address already exist");
-  //       break;
-  //     }
-  //   }
-  // });
+  chrome.storage.local.get(["users"]).then((result) => {
+    for (let i = 0; i < result.users.length; i++) {
+      const element = result.users[i];
+      if (element.email == email) {
+        setError(signup_email, "Email address already exist");
+        break;
+      }
+    }
+  });
   if (email == "") {
     setError(signup_email, "Email can't be empty ");
   } else if (!email.match(re)) {
