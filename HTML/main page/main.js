@@ -4,11 +4,11 @@ username = document.getElementById("username");
 closesidebar = document.getElementById("closesidebar");
 logout = document.getElementById("logout");
 
-// chrome.storage.local.get(["activeUser"]).then((r) => {
-//   if (r.activeUser.firstLogin) {
-//     window.open("../face detection pages/imageSave/starterPage.html", "_blank");
-//   }
-// });
+chrome.storage.local.get(["activeUser"]).then((r) => {
+  if (r.activeUser.firstLogin) {
+    window.open("../face detection pages/imageSave/starterPage.html", "_blank");
+  }
+});
 // account = document.getElementById("acc").onclick = function () {
 //   window.open("setting page/acc.html");
 // };
