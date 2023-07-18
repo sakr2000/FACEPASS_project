@@ -9,13 +9,6 @@ chrome.storage.local.get(["activeUser"]).then((r) => {
     window.open("../face detection pages/imageSave/starterPage.html", "_blank");
   }
 });
-// account = document.getElementById("acc").onclick = function () {
-//   window.open("setting page/acc.html");
-// };
-
-// password = document.getElementById("pass").onclick = function () {
-//   window.open("setting page/acc.html", "_blank");
-// };
 
 settingbtn.addEventListener("click", function () {
   sidebar.classList.add("active");
