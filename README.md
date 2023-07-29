@@ -14,11 +14,11 @@ FacePass is a Chrome extension that works as a middle gateway to lock/unlock web
 
 ## Motivation
 
-The problem we saw is that if you try to log into any website on the web you have two ways either the traditional way that you'll log in manually, write your password and email, and log in to the site, or you log in one time let Chrome save your password and email for future logins.
+The problem we saw is that if you try to log into any website on the web you have two ways either the traditional way that you'll log in manually, by writing your password and email, then log in to the site. or you let Chrome save your password and email then it auto-fills your data in future logins.
 
-In the first way the traditional way you have to write your email and password each time you login to the site and also you have to remember all the emails and passwords for each site you have an account on. And we all know that we shouldn't use 1 email and password for all our sites, hackers will be very glad when you do this.
+In the first way (the traditional way) you have to write your email and password each time you log in to the site, and also you have to remember all the passwords for each site you have an account on. And we all know that we shouldn't use 1 password for all our sites (hackers will be very glad when you do this).
 
-In the second way, you only log in once, and then Chrome saves your password and email so you don't have to remember them and write them again, but it also has a disadvantage, if anyone using your device after you or if the device is shared between more than one person then you have no privacy at all. The other person can easily use your saved accounts and access your data.
+In the second way, you only log in once, and then Chrome saves your password and email so you don't have to remember them and write them again. but it also has a disadvantage, if anyone uses your device after you or if the device is shared between more than one person then you have no privacy at all. The other person can easily use your saved accounts and access your data.
 
 So we came up with the idea of **FacePass** to provide a solution to this by locking your personal sites with your face to provide more privacy along with saving your passwords in the browser.
 
