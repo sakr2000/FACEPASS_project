@@ -22,7 +22,8 @@ In the second way, you only log in once, and then Chrome saves your password and
 
 So we came up with the idea of **FacePass** to provide a solution to this by locking your personal sites with your face to provide more privacy along with saving your passwords in the browser.
 
-## Tecnologies 
+## Tecnologies
+
 - HTML 5 / CSS 3
 - JavaScript
 - Python
@@ -39,35 +40,34 @@ So we came up with the idea of **FacePass** to provide a solution to this by loc
 
 For now, we haven't fully uploaded the extension on the store due to [the challenges](#challenges) we faced, but it works locally. If you want to try it, please follow these steps :
 
-1. Clone or download the repository to your device 
+1. Clone or download the repository to your device
 
 2. Install the required packages for the AI models to run in the `requirments.txt` file in the model folder. You can do this by changing the directory to `FACEPASS_project\Model\` and using the following command :
 
 ```
 pip install -r requirements.txt
 ```
-***Note:*** The **dlib** package may make a problem when installing, the following link may help: https://github.com/datamagic2020/Install-dlib
+
+**_Note:_** The **dlib** package may make a problem when installing, the following link may help: https://github.com/datamagic2020/Install-dlib
 
 3. Activate the developer mode on the browser and load the extension folder with `load unpacked`
-![image](https://github.com/sakr2000/FACEPASS_project/assets/82780472/bff4fac9-5f85-433b-b3df-718d7f22049f)
-
+   ![image](assets/Screenshot_1.png)
 
 4. **After installation you are free to use and test the extension yourself**
 <div>
-  <img src="https://github.com/sakr2000/FACEPASS_project/assets/82780472/4b6b6cdf-89d5-4d5e-957c-4e6e3c13592c" style="width:320px">
+  <img src="assets/Screenshot_2.png" style="width:320px">
 </div>
-
 
 ## Challenges
 
-- We faced a problem with the ` dlib ` library when we tried to upload the server-side code and the model to a remote server
+- We faced a problem with the `dlib` library when we tried to upload the server-side code and the model to a remote server
 - we couldn't find a way to discover and disable the log-in form on websites automatically so that users can specify the sites that they want to be locked. currently, we activated the extension on 3 sites (Facebook, GitHub, and Udemy)
 
 ## Credits
 
-Thanks to my collaborators: 
-* [Mohamed Abdelkarem](https://github.com/Mohamed-Abdelkarem)
-* [Ghada Hussein](https://github.com/ghada29)
-* [Yasmen Khaled](https://github.com/YasmenKhaled)
-* [Lobna Badr](https://github.com/lobnabadr)
+Thanks to my collaborators:
 
+- [Mohamed Abdelkarem](https://github.com/Mohamed-Abdelkarem)
+- [Ghada Hussein](https://github.com/ghada29)
+- [Yasmen Khaled](https://github.com/YasmenKhaled)
+- [Lobna Badr](https://github.com/lobnabadr)

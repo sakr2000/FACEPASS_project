@@ -1,11 +1,9 @@
-dlib @ file:///C:/Users/sakr/Downloads/dlib-19.22.99-cp39-cp39-win_amd64.whl
 mediapipe==0.10.0
 Flask-Cors==3.0.10
-Flask @ file:///home/ktietz/src/ci/flask_1611932660458/work
 Pillow==9.1.1
 numpy==1.22.4
 opencv-contrib-python==4.7.0.72
 opencv-python==4.5.5.64
 face-recognition==1.3.0
 face-recognition-models==0.3.0
-glob2 @ file:///home/linux1/recipes/ci/glob2_1610991677669/work
+dlib @ file:///C:/Users/sakr/Downloads/dlib-19.22.99-cp39-cp39-win_amd64.whl
