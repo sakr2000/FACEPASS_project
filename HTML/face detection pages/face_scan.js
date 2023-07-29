@@ -34,7 +34,10 @@ async function postJSON(data) {
     chrome.storage.local.get(["activeUser"]).then((result) => {
       if (result.activeUser) {
         const element = result.activeUser;
-        if (incomingName.includes(element.name)) {
+        if (incomingName == undefined) {
+          scanText.style.color = "#dc3545";
+          scanText.innerHTML = " Login NOT authorized ! NO user Found";
+        } else if (incomingName.includes(element.name)) {
           setTimeout(() => {
             location.href = "headpose.html";
           }, 100);

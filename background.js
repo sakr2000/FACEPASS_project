@@ -23,7 +23,9 @@ chrome.runtime.onMessage.addListener((message) => {
     chrome.storage.local.set({ authorizedLogin: true });
     // reload the page
     chrome.tabs.query({ url: `*://*.${site}/*` }, function (tabs) {
-      chrome.tabs.reload(tabs[0].id);
+      if (tabs[0]) {
+        chrome.tabs.reload(tabs[0].id);
+      }
     });
   }
 });
